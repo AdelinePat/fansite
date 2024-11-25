@@ -3,6 +3,7 @@
     margin: 0px;
     text-decoration: none;
     list-style-type: none;
+    border: none;
 }
 
 :root {
@@ -14,46 +15,111 @@
     --argentina : #6CACE4;
 }
 
+main {
+  background: url(./images/bubble_pattern_v3_resize.jpg) repeat fixed;
+}
+
+
 p {
     font-family: "Montserrat", sans-serif;
+    font-size: 12pt;
+    margin-bottom: 8px;
 }
 
 h1, h2 {
-    font-family: "Poiret One", serif;
-    letter-spacing: 1pt;
-    font-size: 16pt;
-    font-weight: bold;
-    list-style: none;
+  font-family: "Poiret One", serif;
+  letter-spacing: 1pt;
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0px 16px 0px;
+}
+
+.blackpink h2 {
+  color: var(--blackpink);
+}
+
+article.euro h2 {
+  color: var(--euromillions);
+}
+
+.Scaloneta h2 {
+  color: var(--argentina);
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 section:nth-of-type(2n+2) {
-    color: var(--secondary-color);
-    background: linear-gradient(0.5turn, var(--primary-color), var(--lighter-primary-color));
-    z-index: -2;
+  color: var(--secondary-color);
+  background: linear-gradient(0.5turn, var(--primary-color), var(--lighter-primary-color));
+  z-index: -2;
 }
 
 section:nth-of-type(2n+2) p {
     color: var(--secondary-color);
 }
 
-article {
-    width: calc(100vw- 64px);
-    margin: 16px 32px 16px 32px;
+img.logo {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: auto;
+  object-fit: scale-down;
 }
 
-article img {
+main article {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+
+
+main article img {
     width: 200px;
     height: 200px;
     border-radius: 200px;
-    margin: 30px;
     position: relative;
     z-index: 1;
   
 }
 
+.lien {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  margin-top: 32px;
+}
+
+main article button {
+  display: inline-block;
+  padding: 8px 32px;
+  border-radius: 4px;
+  font-size: 12pt;
+  text-transform: uppercase;
+}
+
+main article button a {
+  color: var(--primary-color);
+}
+
+/* Bordure décalée en pointillée image et paragraphe */
+.contenu {
+  margin-left: 16px;
+  padding: 8px;
+  position: relative;
+}
+
 .bordure-decalee {
-    display: inline-block;
-    position: relative;
+  position: relative;
+  max-width: 200px;
+  max-height: 200px;
+  padding: 16px;
   }
   
 .bordure-decalee:after {   
@@ -64,25 +130,132 @@ article img {
     position: absolute;
     height: 200px;
     width: 200px;
-    top: 40px;
-    left: 45px;
+    top: 20px;
+    left: 25px;
     z-index: 0;
-  }
+}
 
-  #blackpink .bordure-decalee:after {
-    border: 3px dashed var(--blackpink);
-  }
 
-  #euro .bordure-decalee:after {
-    border: 3px dashed var(--euromillions);
-  }
+.blackpink .bordure-decalee:after {
+  border: 3px dashed var(--blackpink);
+}
 
-  #Scaloneta .bordure-decalee:after {
-    border: 3px dashed var(--argentina);
-  }
+.euro .bordure-decalee:after {
+  border: 3px dashed var(--euromillions);
+}
+
+.Scaloneta .bordure-decalee:after {
+  border: 3px dashed var(--argentina);
+}
+/* Fin bordure décalée en pointillée image et paragraphe */
+
+
+.blackpink, article.euro, .Scaloneta {
+  text-align: center;
+}
+
+span.blackpink {
+  color: var(--blackpink);
+}
+
+span.euro {
+  color: var(--euromillions);
+}
+
+span.Scaloneta {
+  color: var(--argentina);
+}
+
+.blackpink button {
+  background: var(--blackpink);
+}
+
+.euro button {
+  background: var(--euromillions);
+}
+
+.Scaloneta button {
+  background: var(--argentina);
+}
 
 footer {
     background: var(--lighter-primary-color);
+}
+
+/* Ecran d'ordinateur*/
+@media screen and (min-width: 1112px) {
+  main article {
+    flex-flow: row nowrap;
+    align-items:flex-start;
+    width: calc(100vw - 200px);
+    max-width: 1300px;
+    }
+
+    section {
+    padding: 48px 32px 48px 32px;
+    }
+
+    section:nth-of-type(2n+2) article {
+      flex-flow: row-reverse nowrap;
+      
+    }
+
+    .contenu:after {   
+      content: "";
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      height: calc(100% - 70px);
+      width: 100%;
+      z-index: 0;
+      
+    }
+
+    section:nth-of-type(2n+1) .contenu:after {
+      rotate: 1.5deg;
+      top: 0px;
+      left: 16px;
+    }
+
+    section:nth-of-type(2n+2) .contenu:after {   
+      rotate: -1.5deg;
+      top: 0px;
+      right: 24px;
+      
+    }
+    
+    .blackpink .contenu:after {
+      border-top: 3px dashed var(--blackpink);
+      border-right: 3px dashed var(--blackpink);
+    
+    }
+    
+    .euro .contenu:after {
+      border-top: 3px dashed var(--euromillions);
+      border-left: 3px dashed var(--euromillions);
+    }
+    
+    .Scaloneta .contenu:after {
+      border-top: 3px dashed var(--argentina);
+      border-right: 3px dashed var(--argentina);
+    }
+}
+
+/* Ecran de tablette et téléphone */
+@media screen and (max-width: 1111px) {
+  section {
+    padding: 16px 32px;
+    }
+  
+  main article {
+  flex-flow: column nowrap;
+  align-items: center;
+  width: calc(100vw- 64px);
+  }
+
+  .blackpink button, .euro button, .Scaloneta button {
+    display: none;
+  }
 }
 
 
