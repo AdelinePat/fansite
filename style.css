@@ -9,7 +9,7 @@
 :root {
     --primary-color: #111111;
     --secondary-color : #D8D8D8;
-    --lighter-primary-color: #212121;
+    --lighter-primary-color: #303030;
     --blackpink : #EFA7B5;
     --euromillions : #EEBB05;
     --argentina : #6CACE4;
@@ -56,7 +56,7 @@ section {
 
 section:nth-of-type(2n+2) {
   color: var(--secondary-color);
-  background: linear-gradient(0.5turn, var(--primary-color), var(--lighter-primary-color));
+  background: linear-gradient(0.75turn, var(--primary-color), var(--lighter-primary-color));
   z-index: -2;
 }
 
@@ -65,8 +65,8 @@ section:nth-of-type(2n+2) p {
 }
 
 img.logo {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   display: block;
   margin: auto;
   object-fit: scale-down;
@@ -81,8 +81,8 @@ main article {
 
 
 main article img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 200px;
     position: relative;
     z-index: 1;
@@ -117,19 +117,19 @@ main article button a {
 
 .bordure-decalee {
   position: relative;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 250px;
+  max-height: 250px;
   padding: 16px;
   }
   
 .bordure-decalee:after {   
     content: "";
-    border-radius: 200px;
+    border-radius: 250px;
     box-sizing: border-box;
     display: block;
     position: absolute;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     top: 20px;
     left: 25px;
     z-index: 0;
@@ -196,8 +196,7 @@ footer {
     }
 
     section:nth-of-type(2n+2) article {
-      flex-flow: row-reverse nowrap;
-      
+      flex-flow: row-reverse nowrap;      
     }
 
     .contenu:after {   
@@ -207,21 +206,21 @@ footer {
       position: absolute;
       height: calc(100% - 70px);
       width: 100%;
-      z-index: 0;
-      
+      z-index: 0;   
     }
 
     section:nth-of-type(2n+1) .contenu:after {
       rotate: 1.5deg;
       top: 0px;
       left: 16px;
+      border-radius: 0px 6px 0px 0px;   
     }
 
     section:nth-of-type(2n+2) .contenu:after {   
       rotate: -1.5deg;
       top: 0px;
       right: 24px;
-      
+      border-radius: 6px 0px 0px 0px;   
     }
     
     .blackpink .contenu:after {
