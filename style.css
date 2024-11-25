@@ -29,6 +29,7 @@ h1, h2 {
 section:nth-of-type(2n+2) {
     color: var(--secondary-color);
     background: linear-gradient(0.5turn, var(--primary-color), var(--lighter-primary-color));
+    z-index: -2;
 }
 
 section:nth-of-type(2n+2) p {
@@ -37,11 +38,53 @@ section:nth-of-type(2n+2) p {
 
 article {
     width: calc(100vw- 64px);
-    padding: 32px 0px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 16px 32px 16px 32px;
 }
+
+article img {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    margin: 30px;
+    position: relative;
+    z-index: 1;
+  
+}
+
+.bordure-decalee {
+    display: inline-block;
+    position: relative;
+  }
+  
+.bordure-decalee:after {   
+    content: "";
+    border-radius: 200px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 40px;
+    left: 45px;
+    z-index: 0;
+  }
+
+  #blackpink .bordure-decalee:after {
+    border: 3px dashed var(--blackpink);
+  }
+
+  #euro .bordure-decalee:after {
+    border: 3px dashed var(--euromillions);
+  }
+
+  #Scaloneta .bordure-decalee:after {
+    border: 3px dashed var(--argentina);
+  }
 
 footer {
     background: var(--lighter-primary-color);
 }
+
+
+
+  
