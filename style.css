@@ -1,0 +1,47 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --primary-color: #111111;
+    --secondary-color : #D8D8D8;
+    --lighter-primary-color: #212121;
+    --blackpink : #EFA7B5;
+    --euromillions : #EEBB05;
+    --argentina : #6CACE4;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1, h2 {
+    font-family: "Poiret One", serif;
+    letter-spacing: 1pt;
+    font-size: 16pt;
+    font-weight: bold;
+    list-style: none;
+}
+
+section:nth-of-type(2n+2) {
+    color: var(--secondary-color);
+    background: linear-gradient(0.5turn, var(--primary-color), var(--lighter-primary-color));
+}
+
+section:nth-of-type(2n+2) p {
+    color: var(--secondary-color);
+}
+
+article {
+    width: calc(100vw- 64px);
+    padding: 32px 0px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+footer {
+    background: var(--lighter-primary-color);
+}
