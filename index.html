@@ -6,8 +6,10 @@
         <meta name="author" content="Limonade : Adeline, Maeva et Noa">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="Images/limonade.ico">
         <title>Limonade</title>
-
+       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,30 +18,28 @@
     </head>
     <body>
         <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Blackpink</a>
-                    </li>
-                    <li>
-                        <a href="">EuroMillions</a>
-                    </li>
-                    <li>
-                        <a href="">La Scaloneta</a>
-                    </li>       
-                    <li>
-                        <a href="">Contact</a>
-                    </li>        
-                </ul>
+            <nav class="navbar">
+                <div class="limonade">
+                    <img src="Images/limonade.svg" alt="Logo de limonade" class="logo">
+                    <h1>Limonade</h1>
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li class="active"><a href="index.html">Accueil</a></li>
+                        <li><a href="fansite1.html">Blackpink</a></li>
+                        <li><a href="fansite2.html">EuroMillions</a></li>
+                        <li><a href="fansite3.html">La Scaloneta</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="responsive">
+                    <input type="checkbox" id="menu-hamburger">
+                    <label for="menu-hamburger"></label>
+                </div>
             </nav>
         </header>
         <main>
             <section>
-                <img class="logo">
-                <h1>Limonade</h1>
                 <article>
                     <img src="" alt="Photo du groupe Blackpink">
                     <h2>Blackpink</h2>
@@ -130,4 +130,12 @@
             <p class="copyright">Limonade © 2024 - Tous droits réservés.</p>
         </footer>
     </body>
+    <script>
+        const menuHamburger = document.querySelector("#menu-hamburger")
+        const navLinks = document.querySelector(".nav-link")
+
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
 </html>
