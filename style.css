@@ -26,6 +26,7 @@ p {
     font-family: "Montserrat", sans-serif;
     font-size: 12pt;
     margin-bottom: 8px;
+    text-align: justify;
 }
 
 h1, h2 {
@@ -180,9 +181,7 @@ span.Scaloneta {
   background: var(--argentina);
 }
 
-footer {
-    background: var(--lighter-primary-color);
-}
+
 
 /* Ecran d'ordinateur*/
 @media screen and (min-width: 1112px) {
@@ -313,7 +312,7 @@ header .navbar {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--lighter-primary-color);
+  background-color: var(--primary-color);
 }
 .responsive label {
   width: 30px;
@@ -356,7 +355,7 @@ header .navbar {
   transform: rotateZ(-40deg);
 }
 #menu-hamburger:checked ~label {
-  background-color: var(--lighter-primary-color);
+  background-color: var(--primary-color);
 }
 #menu-hamburger ~label {
   transition: all 0.6s ease;
@@ -396,7 +395,7 @@ header .navbar {
       top: 0;
       right: 0;
       background-color: var(--primary-color);
-      opacity: 0.95;
+      opacity: 0.97;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -415,8 +414,20 @@ header .navbar {
       align-items: center;
   }
   .navbar .nav-link ul li {
-      font-size: 4em;
+      font-size: 5em;
       font-weight: bolder;
   }
 }
 /* Fin NavBar */
+
+/* Footer */
+footer {
+  background: var(--lighter-primary-color);
+  color: var(--secondary-color);
+}
+.planSite {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* Fin footer */
