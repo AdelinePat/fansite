@@ -18,10 +18,6 @@
     --argentina : #6CACE4;
 }
 
- {
-  
-}
-
 /* Style du header du site et NavBar */
 .headerNavbar {
   /* margin-bottom: 82px; */
@@ -351,6 +347,39 @@ main {
   }
 /* Fin style de main */
 
+/* Footer */
+footer {
+  background: var(--lighter-primary-color);
+  color: var(--secondary-color);
+  font-family: "Poiret One", serif;
+  letter-spacing: 1pt;
+  font-size: 12pt;
+  padding: 24px 32px;
+
+  .planSite {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }  
+  article:first-of-type {
+    font-variant: small-caps;
+  }
+  h2 {
+    padding-bottom: 8px;
+  }
+  p {
+    text-align: center;
+    padding-top: 24px;
+  }
+}
+/* Fin footer */
 
 /* Ecran d'ordinateur*/
 @media screen and (min-width: 1112px) {
@@ -469,6 +498,22 @@ main {
   .blackpink button, .euro button, .Scaloneta button {
     display: none;
   }
+
+  footer {
+    .planSite {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: space-around;
+
+    .menuFooter {
+      padding-bottom: 24px;
+    }
+    .menuBlackpink, .menuEuroMillions, .menuScaloneta {
+      padding-bottom: 8px;
+    }
+  }
+  
+}
 }
 
 /* Navbar responsive */
@@ -502,7 +547,7 @@ main {
               position: absolute;
               top: 0;
               right: -120vw;
-              visibility: hidden;
+              display: none;
               background-color: var(--primary-color);
               opacity: 0.97;
               transition: all 0.4s ease;
@@ -522,8 +567,7 @@ main {
               }
               
           .mobile-menu {
-            /* display: block; */
-            visibility: visible;
+            display: block;
             margin-right: 0;
             top: 0px;
             right: 0px;
@@ -539,15 +583,3 @@ main {
 }
 
 /* Fin NavBar */
-
-/* Footer */
-footer {
-  background: var(--lighter-primary-color);
-  color: var(--secondary-color);
-}
-.planSite {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-/* Fin footer */
