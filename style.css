@@ -383,7 +383,7 @@ main {
             position: absolute;
             height: calc(100% - 70px);
             width: 100%;
-            z-index: -1;  
+            z-index: -1;
           }
 
 
@@ -500,9 +500,9 @@ main {
 
           .nav-link {
               position: absolute;
-              display: none;
               top: 0;
-              right: -100vw;
+              right: -120vw;
+              visibility: hidden;
               background-color: var(--primary-color);
               opacity: 0.97;
               transition: all 0.4s ease;
@@ -522,10 +522,11 @@ main {
               }
               
           .mobile-menu {
-            display: block;
+            /* display: block; */
+            visibility: visible;
             margin-right: 0;
             top: 0px;
-            left: 0px;
+            right: 0px;
             padding: 0px;
           }
       }
