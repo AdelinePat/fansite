@@ -20,18 +20,25 @@
         <nav class="navbar">
             <div class="limonade">
                 <img src="./images/limonade_logo.svg" alt="Logo de limonade" class="logo">
+                <h2>Limonade</h2>
             </div>
             <div class="nav-link">
                 <ul>
+                    <li class="active"><a href="index.html"><img src="./images/home.svg" 
+                        alt="logo d'accueil" class="logo"></a></li>
                     <li><a href="fansite1.html">Blackpink</a></li>
                     <li><a href="fansite2.html">Les membres du groupe</a></li>
                     <li><a href="fansite3.html">Leurs tournées</a></li>
                     <li><a href="contact.html">Galerie</a></li>
+                    <!-- <li><a href="fansite1.html">Blackpink</a></li>
+                        <li><a href="fansite2.html">EuroMillions</a></li>
+                        <li><a href="fansite3.html">La Scaloneta</a></li>
+                        <li><a href="contact.html">Contact</a></li> -->
                 </ul>
+            </div>
                 <div class="responsive">
                 <input type="checkbox" id="menu-hamburger">
-                <label for="menu-hamburger"></label> 
-                </div>
+                <label for="menu-hamburger"></label>   
             </div>
             
         </nav>
@@ -218,38 +225,58 @@
             </article>
         </section>
     </main>
+    
     <footer>
         <section class="planSite">
             <article class="menuFooter">
-                <h3>Bienvenue</h3>
-                <h3>Blackpink</h3>
-                <h3>EuroMillions</h3>
-                <h3>La Scaloneta</h3>
-                <h3>Contact</h3>
+                <h2>Bienvenue</h2>
+                <ul>
+                    <li>Blackpink</li>
+                    <li>EuroMillions</li>
+                    <li>La Scaloneta</li>
+                    <li>Contact</li>
+                </ul>
             </article>
             <article class="menuBlackpink">
-                <h4>Blackpink</h4>
-                <h5>Accueil</h5>
-                <h5>Lien 1</h5>
-                <h5>Lien 2</h5>
-                <h5>Lien 3</h5>
+                <h2>Blackpink</h2>
+                <ul>
+                    <li>Accueil</li>
+                    <li>Lien 1</li>
+                    <li>Lien 2</li>
+                    <li>Lien 3</li>
+                </ul>
             </article>
             <article class="menuEuroMillions">
-                <h4>EuroMillions</h4>
-                <h5>Accueil</h5>
-                <h5>Lien 1</h5>
-                <h5>Lien 2</h5>
-                <h5>Lien 3</h5>
+                <h2>EuroMillions</h2>
+                <ul>
+                    <li>Accueil</li>
+                    <li>Lien 1</li>
+                    <li>Lien 2</li>
+                    <li>Lien 3</li>
+                </ul>
             </article>
             <article class="menuScaloneta">
-                <h4>La Scaloneta</h4>
-                <h5>Accueil</h5>
-                <h5>Lien 1</h5>
-                <h5>Lien 2</h5>
-                <h5>Lien 3</h5>
+                <h2>La Scaloneta</h2>
+                <ul>
+                    <li>Accueil</li>
+                    <li>Lien 1</li>
+                    <li>Lien 2</li>
+                    <li>Lien 3</li>
+                </ul>
             </article>
         </section>
         <p class="copyright">Limonade © 2024 - Tous droits réservés.</p>
     </footer>
+
 </body>
+
+<script>
+    const menuHamburger = document.querySelector("#menu-hamburger")
+    const navLinks = document.querySelector(".nav-link")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
+
 </html>
