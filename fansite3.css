@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "argentina";
+    src: url(../HTML_fansite/AdiCupQ2022.ttf);
+}
+
+p {
+    font-family: "argentina";
+}
