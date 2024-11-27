@@ -1,22 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content="Fansite de La Scaloneta">
         <meta name="author" content="Noa Cengarle">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="fansite3.css">
+        <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
+        <title>La Scaloneta</title>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poiret+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="./Images/argentina.ico">
-        <title>La Scaloneta</title>
     </head>
+
     <body>
-        
+        <header class="headerNavbar">
+            <nav class="navbar">
+
+                <img src="./images/flag.svg" alt="Drapeau de l'Argentine" class="logo">
+                <h1>La Scaloneta</h1>
+
+                <button class="openbtn" onclick="openNav()">☰</button>  
+
+                <div id="mySidepanel" class="sidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <ul>
+                      <li class="active"><a href="index.html">Accueil</a></li>
+                      <li><a href="histoire.html">Un peu d'histoire</a></li>
+                      <li><a href="worldcup.html">FIFA World Cup 2022</a></li>
+                      <li><a href="celebrations.html">Le phénomène social</a></li>
+                      <li><a href="avenir.html">A venir</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <img src="./Images/todosjuntoss.jpg" alt="Photo de toute l'équipe d'Argentine" class="todos">
+
+            <section class="articles">
+
+                <article class="histoire">
+                    <img src="./Images/scaloni.jpeg" alt="Lionel Scaloni">
+                    <div class="text">
+                        <h2>Lionel Sebastián Scaloni</h2>
+                        <p>Né le 16 mai 1978 à Rosario, province de Santa Fe, est un footballeur 
+                            international argentin devenu entraîneur.
+                            En 2018, après des expériences ratées avec d’autres entraîneurs, l'AFA 
+                            choisit d'offrir le poste d’entraîneur par intérim à Lionel Scaloni. 
+                            Sa nomination provoque une grande surprise, étant donné que l'expérience 
+                            du jeune entraîneur se réduit uniquement à avoir dirigé l'équipe U-20 avec 
+                            Pablo Aimar.
+                            Grâce au bilan positif des matchs amicaux et à la bonne image que 
+                            l'équipe d'entraîneurs a acquise parmi les joueurs convoqués et la 
+                            direction de la Fédération Argentine de Football, Scaloni est nommé 
+                            entraîneur définitif de l'équipe nationale le 29 novembre. Sa 
+                            continuité a été assurée jusqu'à la Copa América 2019 par le président 
+                            de l'AFA, Claudio Tapia, qui lui a apporté son soutien et également une 
+                            option pour prolonger son contrat jusqu'à la Copa América 2020.
+                        </p>
+                    </div>
+                    <img src="./Images/scaloneta.webp" alt="Image du bus de l'équipe d'Argentine" class="mobile">
+
+                </article>
+
+                <article class="worldcup">
+                    <img src="./Images/coupe.png" alt="Coupe du monde" class="copa">
+                    <div class="text">
+                        <h2>FIFA World Cup 2022</h2>
+                        <p>La Coupe du monde de football 2022 est la 22e édition de ce tournoi quadriennal. 
+                            Organisée par la FIFA, elle se déroule au Qatar du 20 novembre au 18 décembre 2022, 
+                            jour de la fête nationale. C'est le septième et dernier Mondial comptant 32 
+                            participants.
+                            Pour la Coupe du monde au Qatar, Scaloni a maintenu la base de l'équipe qui a 
+                            remporté la Copa América et la Finalissima, avec une équipe dirigée par Messi, 
+                            Dibu Martínez, Otamendi, Cuti Romero, Lautaro, De Paul, Di María et Paredes. 
+                            Dans ce contexte, beaucoup ont souligné les similitudes entre la précédente et 
+                            la retentissante Coupe du monde de 2002, dans laquelle l'équipe était arrivée 
+                            comme grande favorite et avait fini par être éliminée en phase de groupes.
+                            L'Argentine a été placée dans le groupe C, avec l'Arabie saoudite, le Mexique 
+                            et la Pologne.
+                        </p>
+                    </div>
+                    <img src="./Images/mascotte.png" alt="La'eeb, mascotte de la coupe du monde 2022" 
+                    class="mascotte mobile">
+                </article>
+
+                <article class="phenomene">
+                    <img src="./Images/bus5.webp" alt="Les champions du monde dans le bus">
+                    <div class="text">
+                        <h2>Le phénomène social</h2>
+                        <p>Quatre millions d'Argentins pour célébrer Messi et sa bande et c'est la 
+                            folie totale.
+                            Entre l’arrivée des champions du monde à l’aéroport d’Ezeiza deux jours 
+                            après la finale et la célébration du titre dans ses rues, Buenos Aires a 
+                            vécu une journée absolument démentielle.
+                        </p>
+                    </div>
+                    <img src="./Images/messi.webp" alt="Messi embrassant la coupe du monde" class="mobile">
+                </article>
+
+                <article class="avenir">
+                    <img src="./Images/finalissima_25.jpeg" alt="Affiche de la Finalissima 2025">
+                    <div class="text">
+                        <h2>A venir</h2>
+                        <p>L'Espagne et l'Argentine devraient se rencontrer lors de l'édition 2025 
+                            de la Finalissima, qui verra les vainqueurs de l'Euro 2024 affronter 
+                            les champions de la Copa America.
+                            L'Argentine prend le large en tête des qualifications sud-américaines 
+                            pour le Mondial 2026, tandis que le Brésil échoue encore à convaincre 
+                            en arrachant le nul contre l'Uruguay mardi. Un succès qui permet également 
+                            aux champions du monde en titre de conserver leur première place au 
+                            classement FIFA.
+                        </p>
+                    </div>
+                    <img src="./Images/eliminatorias_26.jpg" alt="Affiche des éliminatoires de la coupe du monde 2026" class="mobile">
+                </article>
+
+            </section>
+
+        </main>
+
         <footer>
+
+            <section class="planSite">
+
+                <article class="menuFooter">
+                    <div class="titre">
+                        <img src="./Images/limonade.svg" alt="logo de Limonade" class="logo">
+                        <h2><a href="index.html">Limonade</a></h2>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">Bienvenue</a></li>
+                        <li><a href="fansite1.html">Blackpink</a></li>
+                        <li><a href="fansite2.html">EuroMillions</a></li>
+                        <li><a href="fansite3.html">La Scaloneta</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </article>
+
+                <article class="menuScaloneta">
+                    <div class="titre">
+                        <img src="./images/flag.svg" alt="Drapeau de l'Argentine" class="logo">
+                        <h2><a href="fansite3.html">La Scaloneta</a></h2>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="histoire.html">Un peu d'histoire</a></li>
+                        <li><a href="worldcup.html">FIFA World Cup 2022</a></li>
+                        <li><a href="celebrations.html">Le phénomène social</a></li>
+                        <li><a href="avenir.html">A venir</a></li>
+                    </ul>
+                </article>
+
+            </section>
+
             <p class="copyright">Fansite de La Scaloneta © 2024 - Tous droits réservés.</p>
+
         </footer>
+    </body>
+
+    <script>
+        function openNav() {
+        document.getElementById("mySidepanel").style.width = "350px";
+        }
+
+        function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        }
+    </script>
+
     </body>
 </html>

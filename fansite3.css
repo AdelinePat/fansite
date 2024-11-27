@@ -1,8 +1,268 @@
-@font-face {
-    font-family: "argentina";
-    src: url(../HTML_fansite/AdiCupQ2022.ttf);
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    /* border: red;
+    border-style: solid; */
 }
 
-p {
+:root {
+    --primary-color: #6CACE4;
+    --secondary-color : #FFFFFF;
+    --tertiary-color: #000000;
+    --quaternary-color : #FFB81C;
+    --quinary-color: #7D4016;
+    --hover: #002f5c;
+}
+
+@font-face {
     font-family: "argentina";
+    src: url(./Images/AdiCupQ2022.ttf);
+}
+
+/* Navbar et menu */
+.headerNavbar {
+    width: 100vw;
+    background-color: var(--primary-color);
+
+    .navbar {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        padding: 5px 32px;
+
+        .logo {
+            max-width: 50px;
+        }
+
+        h1 {
+            font-family: "argentina";
+            letter-spacing: 1pt;
+            font-size: 32pt;
+            color: var(--secondary-color);
+        }
+        .openbtn:hover {
+            color: var(--hover);
+        }
+        .openbtn {
+            font-size: 36pt;
+            cursor: pointer;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+    }
+}
+
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    opacity: 0.9;
+    overflow-x: hidden;
+    transition: 0.4s ease;
+    padding-top: 60px;
+  
+    a {
+        font-family: "argentina";
+        font-size: 20pt;
+        color: var(--secondary-color);
+        display: block;
+    }
+    ul {
+        padding-top: 24px;
+    }
+    ul li a {
+        padding: 24px 32px;
+    }
+    ul li.active a {
+        color: var(--hover);
+    }
+    a:hover {
+        color: var(--hover);
+    }
+    .closebtn {
+        position: absolute;
+        top: 2px;
+        right: 35px;
+        font-size: 36pt;
+        cursor: pointer;
+      }
+    }
+/* Fin navbar et menu */
+
+/* Main */
+main {
+     .todos {
+            width: 100vw;
+            height: 350px;
+            object-fit: cover;
+            object-position: 50% 65%;
+        }
+    .articles {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 48px;
+        gap: 32px;
+
+        article {
+            border: 2px solid var(--primary-color);
+            border-radius: 16px;
+            box-shadow: 2px 5px #6cace47f;
+            display: flex;
+            justify-content: space-around;
+            
+            img {
+                width: 222px;
+                height: 271px;
+                object-fit: cover;
+                padding: 8px 16px;
+            }
+            .text {
+                width: 50%;
+                padding: 12px;
+                h2 {
+                    font-family: "argentina";
+                    font-size: 14pt;
+                    text-align: center;
+                    padding-bottom: 8px;
+                }
+                p {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 12pt;
+                    text-align: justify;
+                }
+            }
+        }
+            .histoire {
+                background-image: url("./Images/background1.png");
+                background-position: 50% 45%;
+            }
+           
+            .worldcup {
+                background-image: url("./Images/background2.png");
+                background-size: cover;
+                background-position: 50% 55%;
+            }
+            .phenomene {
+                background-image: url("./Images/background3.png");
+                background-size: cover;
+                background-position: 50% 45%;
+            }
+            .avenir {
+                background-image: url("./Images/background4.png");
+                background-size: cover;
+                background-position: 50% 35%;
+            }
+    }
+}
+
+
+/* Fin main */
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: "argentina";
+    font-size: 10pt;
+    padding: 24px;
+  
+    .planSite {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+  }
+    .titre {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 12px;
+    }
+    .logo {
+        width: 40px;
+    }
+    .menuFooter, .menuScaloneta {
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+        justify-content: flex-start;
+        align-items: last baseline;
+    }  
+    article {
+        ul li {
+            padding-bottom: 8px;
+        }
+        h2 a, ul li a {
+            color: var(--secondary-color);
+        }
+        h2 a:hover, ul li a:hover {
+            color: var(--hover);
+          }
+}
+    p {
+        text-align: center;
+        padding-top: 32px; 
+        font-size: 8pt;
+    }
+}
+/* Fin footer */
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 992px) {
+    .headerNavbar {
+        .sidepanel {
+            opacity: 1;
+
+            a {
+                font-size: 14pt;
+            }
+            .closebtn {
+                font-size: 36px;
+            }
+        }
+    }
+    footer {
+        font-size: 8pt;
+
+        .planSite {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+      }
+    }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+    .headerNavbar {
+        .navbar {
+            h1 {
+                font-size: 24pt;
+            }
+    }
+}
+}
+
+/* // Very small devices (less than 450px) */
+@media (max-width: 450px) {
+    .headerNavbar {
+        .navbar {
+            h1 {
+                font-size: 16pt;
+            }
+    }
+}
+footer {
+    font-size: 6pt;
+}
 }
