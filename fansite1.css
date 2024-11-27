@@ -2,10 +2,16 @@
     padding: 0px;
     margin: 0px;
     text-decoration: none;
-    list-style-type: none;
+    ul {
+      list-style-type: none;
+      }
     border: none;
 }
 
+@font-face {
+  font-family: "primetime" ;
+  src: url(./images_blackping/Primetime.ttf);
+}
 
 :root {
     --primary-color: #111111;
@@ -16,151 +22,19 @@
     --argentina : #6CACE4;
 }
 
- {
-  
-}
+ 
 
 /* Style du header du site et NavBar */
-header {
-    background: url(./images/blackpink9.jpg) no-repeat 50% 20%;
+.headerNavbar {
     object-fit: fill;
     height: 100vh;
-    /* margin-bottom: 82px; */
-
     box-sizing: border-box;
+
     nav {
-        background-color: var(--primary-color);
-        height: 55px;
-        align-items: center;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        width: 100%;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: space-between;
-        overflow: hidden;
-    
-        img {
-            max-width: 30px;
-            height: auto;
-            margin: 0;
-            }
-    
-        .limonade {
-            display: flex;
-            justify-content: space-evenly;
-            gap: 24px;
-            align-items: center;
-            padding: 0px 32px;
-            max-height:fit-content;
-            /* position: absolute;
-            top: 5px;
-            left: 15px; */   
-        }
-    
-        h2 {
-            font-family: "Poiret One", serif;
-            letter-spacing: 1pt;
-            font-size: 20pt;
-            padding: 0;
-            font-weight: bold;
-            color: var(--secondary-color);
-        }
-    
-        .nav-link {
-            
-            padding: 0px 24px;
-    
-            ul {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-    
-            li a {
-                display: inline-block;
-                color: var(--secondary-color);
-                font-family: "Poiret One", serif;
-                letter-spacing: 1pt;
-                font-size: 14pt;
-                font-weight: bolder;
-                padding: 16px;
-            }
-            }
-  
-        
-  
-      }
-    }
-}
-
-  /* Style Menu burger */
-  .responsive {
-    display: none;
-    /* position: absolute;
-    top: 0;
-    right: 0; */
-    background-color: var(--primary-color);
-
-    label {
-      width: 30px;
-      height: 4px;
-      background-color: var(--secondary-color);
-      position: absolute;
-      top: 25px;
-      right: 20px;
-      cursor: pointer;
-      border-radius: 16px;
-      z-index: 3;
-    
-      &::before, &::after {
-          content: " ";
-          width: 30px;
-          height: 4px;
-          background-color: var(--secondary-color);
-          position: absolute;
-          display: block;
-          border-radius: 16px;
-          transition: all 0.7s ease;
-      }
-    
-      &::before {
-          bottom: 9px;
-          left: 0;
-          transform-origin: left top;
-      }
-    
-      &::after {
-          top: 9px;
-          left: 0;
-          transform-origin: left bottom;
-      }
-    }
-
-    #menu-hamburger {
-    
       display: none;
-
-      &:checked {
-        &~label::before{
-          transform: rotateZ(40deg);
-        }
-
-        &~label::after{
-          transform: rotateZ(-40deg);
-        }
-        ~label {
-          background-color: var(--primary-color);
-        }
-      }
-
-      &~label {
-        transition: all 0.6s ease;
-      }
     }
   }
-}
+
 
 /* Style de main */
 main {
@@ -169,377 +43,246 @@ main {
   padding-bottom: 16px;
 
 
-/* Style commun à toutes les sections */
-  section {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    margin-bottom: 16px;
-  
-        h1, h2 {
-          font-family: "Poiret One", serif;
-          letter-spacing: 1pt;
-          font-size: 24pt;
-          font-weight: bold;
-          text-align: center;
-          padding: 8px 0px 16px 0px;
-        }
-      
-        p {
-          color: var(--lighter-primary-color);
-          font-family: "Montserrat", sans-serif;
-          font-size: 12pt;
-          margin-bottom: 8px;
-        }
-      
-        header {
-          background: linear-gradient(0.75turn, var(--lighter-primary-color), var(--primary-color));
-          color: var(--secondary-color);
-          padding: 32px;
-          border-radius: 32px;
-      
-              h1 {
-                text-transform: uppercase;
-                font-weight: bolder;
-                letter-spacing: 3pt;
-                display: inline-block;
-                background: linear-gradient(to right,var(--blackpink), var(--argentina), var(--euromillions));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-              }
-          
-              p {
-                color: var(--secondary-color);
-              }
-        }
-          
+  /* Style commun à toutes les sections */
+    section {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+
         article {
-          display: flex;
-          justify-content: center;
-          margin-top: 32px;
-        
-              img {
-                width: 250px;
-                height: 250px;
-                border-radius: 200px;
-                position: relative;
-                z-index: 1;
+            max-width: 1300px;         
+            /* margin-top: 32px; */
+
+            header {
+                display: flex;
+                align-items: center;
+
+                h2 {
+                font-family: "Poiret One", serif;
+                color: var(--blackpink);
+                letter-spacing: 2pt;
+                font-weight: 600;
+                margin: 20px;
+                text-align: center;
+
+
+                  &:after {
+                    content: "";
+                    box-sizing: border-box;
+                    display: block;
+                    position: relative;
+
+                    top: 20px;
+                    left: calc(-20% / 2);
+                    background: var(--blackpink);
+                    height: 1.5px;
+                    width: 120%;
+                  }
                 }
 
-              .lien {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-evenly;
-                margin-top: 32px;
-              }
+                img {
+                  border-radius: 150%;
+                  box-shadow: 2px 2px 0px var(--blackpink);
+                  object-fit: cover;
 
-              button {
-                display: inline-block;
-                padding: 8px 32px;
-                border-radius: 4px;
-                font-size: 12pt;
-                text-transform: uppercase;
+                  background: rgba(231, 231, 231, 0.4);
+                }
+            }
+          
+            font-family: "Montserrat", sans-serif;
+            font-size: 12pt;
 
-                    a {
-                      color: var(--primary-color);
-                    }
-              }
-
-              /* Bordure décalée en pointillée image et paragraphe */
-              .contenu {
-                margin-left: 16px;
-                padding: 8px;
-                position: relative;
-                z-index: 1;
-              }
+            p {
+              padding-bottom : 8px;
               
-              /* Bordure pointillée des images seulement */
-              .bordure-decalee {
-                position: relative;
-                max-width: 250px;
-                max-height: 250px;
-                padding: 16px;
+              /* &:first-of-type {
+              } */}
+              
+            :is(p, h3):first-of-type {
+              margin-top: 32px;
+            }
 
-                    &:after {   
-                      content: "";
-                      border-radius: 250px;
-                      box-sizing: border-box;
-                      display: block;
-                      position: absolute;
-                      height: 250px;
-                      width: 250px;
-                      top: 20px;
-                      left: 25px;
-                      z-index: 0;
-                    }        
+
+              /* &:last-of-type {
+                margin-bottom: 45px;
+                background: purple;
+              } */
+            
+              #awards {     
+                ul {
+                  
+                  list-style: disc inside;
+      
+                  }
               }
-        }
-  
-        .blackpink, .euro, .Scaloneta {
-          text-align: center;
-        }  
 
-        .blackpink {
-          h2 {
-          color: var(--blackpink);
-          }
-      
-          .bordure-decalee:after {
-            border: 3px dashed var(--blackpink);
-          }
-      
-          button {
-            background: var(--blackpink);
-          }
+            }
+          
         }
-      
-        .euro {
-            h2 {
-            color: var(--euromillions);
-            }
-      
-            .bordure-decalee:after {
-              border: 3px dashed var(--euromillions);
-            }
-      
-            button {
-              background: var(--euromillions);
-            }
-          } 
-      
-        .Scaloneta {
-            h2 {
-            color: var(--argentina);
-            }
-      
-            .bordure-decalee:after {
-              border: 3px dashed var(--argentina);
-            }
-      
-            button {
-              background: var(--argentina);
-            }
-          }           
-      }
-  section:last-of-type {
-    margin-bottom: none;
-  }
-  
-      :has(span) {
-        .blackpink {
-            color: var(--blackpink);
-        }
-    
-        .euro {
-            color: var(--euromillions);
-        }
-    
-        .Scaloneta {
-            color: var(--argentina);
+
+      section:first-of-type {
+        article {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          gap: 48px;
+
+          img {
+            min-width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 100%;
+            box-shadow: 2px 2px 8px var(--blackpink);
+          }
+          .content {
+            display: flex;
+            flex-flow: column nowrap;
+          }
         }
       }
-    
-/*Style des sections paires */
-  section:nth-of-type(2n+2) {
-    color: var(--secondary-color);
-    background: linear-gradient(0.75turn, var(--primary-color), var(--lighter-primary-color));
-    z-index: -2;
-
-        p {
+  /*Style des sections paires */
+    section:nth-of-type(2n+2) {
+          background: linear-gradient(0.45turn, var(--primary-color), var(--lighter-primary-color));
           color: var(--secondary-color);
-        }
-  }
+          box-shadow: 0px 2px 4px var(--blackpink);
+    }
 
-  }
+
+    }
 /* Fin style de main */
 
 
 /* Ecran d'ordinateur*/
 @media screen and (min-width: 1112px) {
-  .navbar .nav-link ul li a {
-    margin-right: 24px;
+
+  .headerNavbar {
+    background: url(./images_blackping/blackpink9.jpg) 50% 20% no-repeat;
+    background-size: cover;
   }
 
   main {
 
-  /* style général des sections */
+    section:first-of-type {
+      padding-top: 0px;
+    }
+
+    section:last-of-type {
+      padding-bottom: 0px;
+    }
+    
+                                                                                  /* section:first-of-type {
+                                                                                    article {
+                                                                                      header {
+                                                                                          flex-flow: column nowrap!important;
+                                                                                          align-items: center;
+
+                                                                                          img {
+                                                                                            width: 300px;
+                                                                                            height: 300px;
+                                                                                          }
+                                                                                      }
+                                                                                    }
+                                                                                  } */
+
     section {
-
-      padding: 48px 32px 48px 32px;
-
-      header {
-        width: calc(100vw - 400px);
-        margin-bottom: 48px;
-      }
+      padding: 48px 32px;
 
       article {
-        flex-flow: row nowrap;
-        align-items:flex-start;
-        width: calc(100vw - 200px);
-        max-width: 1300px;
+        
+        width: 80%;
+        padding: 0px 32px;
+        header {
+          flex-flow: row nowrap;
+          justify-content: space-around;
 
-          .contenu:after {   
-            content: "";
-            box-sizing: border-box;
-            display: block;
-            position: absolute;
-            height: calc(100% - 70px);
-            width: 100%;
-            z-index: -1;
+          h2 {
+            font-size: 24pt;
           }
 
-
+          img {
+            width: 150px;
+            height: 150px;
+          }
         }
-    }
 
-    /* style des section paires */
-    section:nth-of-type(2n+2) {
-    article {
-      flex-flow: row-reverse nowrap;
+        #awards {
+          column-count: 2;
+          column-gap: 32px;
+          /* column-rule: 1px solid var(--blackpink); */
+          background: red;
+          text-align: left;
+        }
 
-      .contenu:after {   
-        rotate: -1.5deg;
-        top: 0px;
-        right: 24px;
-        border-radius: 6px 0px 0px 0px;   
-      }      
-    }
-  } 
-
-    /* style des section impaires */
-    section:nth-of-type(2n+1) {
-      .contenu:after {
-        rotate: 1.5deg;
-        top: 0px;
-        left: 16px;
-        border-radius: 0px 6px 0px 0px;
       }
-
     }
 
-  }
-
-  .blackpink {
-    .contenu:after {
-      border-top: 3px dashed var(--blackpink);
-      border-right: 3px dashed var(--blackpink);
-    
-    }
-  }
   
-  .euro {
-    .contenu:after {
-      border-top: 3px dashed var(--euromillions);
-      border-left: 3px dashed var(--euromillions);
-    }
-  }
 
-  .Scaloneta {
-    .contenu:after {
-      border-top: 3px dashed var(--argentina);
-      border-right: 3px dashed var(--argentina);
+    section:nth-of-type(2n+1) { 
+      article {
+        header {
+          flex-direction: row-reverse;
+        }
+      }
     }
   }
-    
 }
+ 
 
 /* Ecran de tablette et téléphone */
 @media screen and (max-width: 1111px) {
-                                                                                        /* .headerNavbar {
-                                                                                          margin-bottom: 32px;
-                                                                                        } */
-  
-  main {
-      section {
-        padding: 16px 32px;
-      
-    
-        header {
-          width: calc(100vw - 180px);
-          margin-bottom: 32px;
-        }
-
-        article {
-          flex-flow: column nowrap;
-          align-items: center;
-          width: calc(100vw- 64px);
-          }
-    }
-
-  } 
-
-  .blackpink button, .euro button, .Scaloneta button {
-    display: none;
-  }
-}
-
-/* Navbar responsive */
-@media screen and (max-width: 982px) {
 
   .headerNavbar {
-      .navbar {
-          background-color: transparent;
-      
-
-          .limonade {
-              /* position: absolute;
-              top: 0;
-              left: 0; */
-              /* width: 100vw; */
-              height: 38px;
-              box-sizing: border-box;
-              background-color: var(--primary-color);
-
-              img {
-                height: 40px;
-                width: auto;
-              }
-
-              h2 { 
-                  display: none;
-              }
-          }
-
-          .nav-link {
-              position: absolute;
-              top: 0;
-              right: -120vw;
-              visibility: hidden;
-              background-color: var(--primary-color);
-              opacity: 0.97;
-              transition: all 0.4s ease;
-              z-index: 2;
-
-                  ul {
-                      flex-flow: column nowrap;
-                      align-items: center;
-                      height: 100vh;
-                      width: 100vw;
-
-                      li {
-                          font-size: 5em;
-                          font-weight: bolder;
-                      }
-                  }
-              }
-              
-          .mobile-menu {
-            /* display: block; */
-            visibility: visible;
-            margin-right: 0;
-            top: 0px;
-            right: 0px;
-            padding: 0px;
-          }
-      }
-
-      .responsive {
-          display: block;
-      }
+    background: url(./images_blackping/blackpink2.jpg) 50% 20% no-repeat;
+    background-size: contain;
   }
 
-}
+  main {
 
+    section:first-of-type {
+      article {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 24px;
+        }
+      }
+
+    section {
+
+      padding: 16px 32px;
+
+      article {
+        width: 100%;
+        text-align: center;
+
+        header {
+          flex-flow: column nowrap;
+          justify-content: center;
+
+          h2 {
+            font-size: 18pt;
+          }
+
+          img {
+            max-width: 70px;
+            height: 70px;
+          }
+        }
+
+        #awards {
+          column-count: 1;
+          column-gap: 32px;
+          /* column-rule: 1px solid var(--blackpink); */
+          background: green;
+        }
+        
+      }
+    }
+  }
+}
+  
+/* Navbar responsive */
+@media screen and (max-width: 982px) {}
 /* Fin NavBar */
 
 /* Footer */
@@ -547,7 +290,9 @@ footer {
   background: var(--lighter-primary-color);
   color: var(--secondary-color);
 }
-.planSite {
+
+.menuBlackpink {
+  order: -1;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
