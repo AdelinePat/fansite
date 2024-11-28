@@ -44,6 +44,7 @@
             letter-spacing: 1pt;
             font-size: 32pt;
             color: var(--secondary-color);
+            cursor: default;
         }
         .openbtn:hover {
             color: var(--hover);
@@ -95,7 +96,7 @@
         font-size: 36pt;
         cursor: pointer;
       }
-    }
+}
 /* Fin navbar et menu */
 
 /* Main */
@@ -106,28 +107,43 @@ main {
             object-fit: cover;
             object-position: 50% 65%;
         }
+        
     .articles {
         display: flex;
         flex-direction: column;
-        padding: 32px 48px;
-        gap: 32px;
+        padding: 48px;
+        gap: 40px;
+
+        img {
+            width: 222px;
+            height: 271px;
+            padding: 8px 16px;
+        }
 
         article {
+            max-width: 1376px;
+            max-height: 300px;
             border: 2px solid var(--primary-color);
             border-radius: 16px;
             box-shadow: 2px 5px #6cace47f;
             display: flex;
             justify-content: space-around;
-            
-            img {
-                width: 222px;
-                height: 271px;
+            transition: transform .2s;
+        }
+        article:hover {
+            transform: scale(1.02);
+        }   
+        .histoire img, .phenomene img, .avenir img {
                 object-fit: cover;
-                padding: 8px 16px;
+            }
+            .worldcup img {
+                object-fit: contain;
             }
             .text {
                 width: 50%;
                 padding: 12px;
+                cursor: pointer;
+              
                 h2 {
                     font-family: "argentina";
                     font-size: 14pt;
@@ -138,44 +154,34 @@ main {
                     font-family: "Montserrat", sans-serif;
                     font-size: 12pt;
                     text-align: justify;
+                    overflow:hidden;
+                    line-height: 1rem;
+                    max-height: 14rem;
+                    -webkit-box-orient: vertical;
+                    display: block;
+                    display: -webkit-box;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 14;
+                    }
+                a {
+                    color: var(--tertiary-color);
+
+                }
                 }
             }
-        }
-            .histoire {
-                background-image: url("./Images/background1.png");
-                background-position: 50% 45%;
-            }
-           
-            .worldcup {
-                background-image: url("./Images/background2.png");
-                background-size: cover;
-                background-position: 50% 55%;
-            }
-            .phenomene {
-                background-image: url("./Images/background3.png");
-                background-size: cover;
-                background-position: 50% 45%;
-            }
-            .avenir {
-                background-image: url("./Images/background4.png");
-                background-size: cover;
-                background-position: 50% 35%;
-            }
-    }
 }
-
-
+    
 /* Fin main */
 
 /* Footer */
 footer {
     background: var(--primary-color);
     color: var(--secondary-color);
-    font-family: "argentina";
-    font-size: 10pt;
     padding: 24px;
   
     .planSite {
+        font-family: "argentina";
+        font-size: 10pt;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -209,15 +215,44 @@ footer {
           }
 }
     p {
+        font-family: "Poiret One", serif;
+        font-size: 12pt;
         text-align: center;
         padding-top: 32px; 
-        font-size: 8pt;
     }
 }
 /* Fin footer */
 
-/* // Medium devices (tablets, less than 992px) */
-@media (max-width: 992px) {
+/* // Computer (more than 1141px) */
+@media (min-width: 1141px) {
+    main {
+        .articles {
+            .histoire {
+                background-image: url("./Images/background1.png");
+                background-position: 50% 45%;
+            }
+           
+            .worldcup {
+                background-image: url("./Images/background2.png");
+                background-size: cover;
+                background-position: 50% 55%;
+            }
+            .phenomene {
+                background-image: url("./Images/background3.png");
+                background-size: cover;
+                background-position: 50% 40%;
+            }
+            .avenir {
+                background-image: url("./Images/background4.png");
+                background-size: cover;
+                background-position: 50% 35%;
+            }
+        }
+    }
+}
+
+/* // Medium devices (tablets, less than 1140px) */
+@media (max-width: 1140px) {
     .headerNavbar {
         .sidepanel {
             opacity: 1;
@@ -228,6 +263,28 @@ footer {
             .closebtn {
                 font-size: 36px;
             }
+        }
+    }
+    main {
+        .articles {
+            background-image: url("./Images/ballon.png");
+            background-repeat: no-repeat;
+            background-position: 130% 30%;
+            padding: 24px 16px;
+            gap: 24px;
+
+            .mobile {
+                display: none;
+            }
+
+                .text {
+                    width: 60%;
+
+                    p {
+                        max-height: 12rem;
+                        -webkit-line-clamp: 12;
+                    }
+                }
         }
     }
     footer {
@@ -251,6 +308,32 @@ footer {
             }
     }
 }
+    main {
+        .todos {
+            height: 250px;
+        }
+        .articles {
+            background-size: 80%;
+            padding: 16px 8px;
+            gap: 16px;
+
+            img {
+                width: 125px;
+                height: 160px;
+            }
+            .text {
+                h2 {
+                    font-size: 12pt;
+            }
+                p {
+                    font-size: 10pt;
+                    max-height: 7rem;
+                    -webkit-line-clamp: 7;
+                    }
+                }
+            }
+    }
+    
 }
 
 /* // Very small devices (less than 450px) */
@@ -262,7 +345,30 @@ footer {
             }
     }
 }
-footer {
-    font-size: 6pt;
+    main {
+        .todos {
+            height: 150px;
+        }
+        
+        .articles {
+            .text {
+                width: 40%;
+
+                img {
+                    width: 85px;
+                    height: 110px;
+                }
+                h2 {
+                    font-size: 9pt;
+                }
+                p {
+                    font-size: 7pt;
+                }
+            }
+            }
+        
+    footer {
+        font-size: 6pt;
+    }
 }
 }
