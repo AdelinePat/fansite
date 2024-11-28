@@ -81,7 +81,7 @@
         padding-top: 24px;
     }
     ul li a {
-        padding: 24px 32px;
+        padding: 24px 48px;
     }
     ul li.active a {
         color: var(--hover);
@@ -99,8 +99,14 @@
 }
 /* Fin navbar et menu */
 
-/* Main */
+/* Main page accueil*/
 main {
+    p {
+        font-family: "Montserrat", sans-serif;
+    }
+    h2 {
+        font-family: "argentina";
+    }
      .todos {
             width: 100vw;
             height: 350px;
@@ -108,7 +114,7 @@ main {
             object-position: 50% 65%;
         }
         
-    .articles {
+    section.articles {
         display: flex;
         flex-direction: column;
         padding: 48px;
@@ -122,56 +128,117 @@ main {
 
         article {
             max-width: 1376px;
-            max-height: 300px;
             border: 2px solid var(--primary-color);
             border-radius: 16px;
             box-shadow: 2px 5px #6cace47f;
             display: flex;
             justify-content: space-around;
-            transition: transform .2s;
         }
-        article:hover {
+        .histoire, .worldcup, .phenomene, .avenir {
+            transition: transform .2s;
+            max-height: 300px;
+
+            .text p {
+                overflow:hidden;
+                line-height: 1rem;
+                max-height: 14rem;
+                -webkit-box-orient: vertical;
+                display: block;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 14;
+            }
+        }
+        .histoire:hover, .worldcup:hover, .phenomene:hover, .avenir:hover {
             transform: scale(1.02);
         }   
         .histoire img, .phenomene img, .avenir img {
                 object-fit: cover;
-            }
-            .worldcup img {
+        }
+        .worldcup img {
                 object-fit: contain;
+        }
+        .text {
+            width: 50%;
+            padding: 12px;
+            cursor: pointer;
+            
+            h2 {
+                font-size: 14pt;
+                text-align: center;
+                padding-bottom: 8px;
             }
-            .text {
-                width: 50%;
-                padding: 12px;
-                cursor: pointer;
-              
-                h2 {
-                    font-family: "argentina";
-                    font-size: 14pt;
-                    text-align: center;
-                    padding-bottom: 8px;
+            p {
+                font-size: 12pt;
+                text-align: justify;
                 }
-                p {
-                    font-family: "Montserrat", sans-serif;
-                    font-size: 12pt;
-                    text-align: justify;
-                    overflow:hidden;
-                    line-height: 1rem;
-                    max-height: 14rem;
-                    -webkit-box-orient: vertical;
-                    display: block;
-                    display: -webkit-box;
-                    text-overflow: ellipsis;
-                    -webkit-line-clamp: 14;
-                    }
-                a {
-                    color: var(--tertiary-color);
+            a {
+                color: var(--tertiary-color);
 
-                }
-                }
             }
+        }
+    }
 }
-    
-/* Fin main */
+/* Fin main page accueil */
+
+/* Main page histoire*/
+main {
+    section.histoire {
+        display: flex;
+        flex-direction: column;
+
+        article:nth-of-type(2n+2) {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        article {
+            padding: 40px 48px;
+        }
+        h2 {
+            text-align: center;
+            padding-bottom: 24px;
+        }
+        p {
+            text-align: justify;
+            padding: 8px;
+        }
+        .paysage {
+            width: 500px;
+            height: 280px;
+            object-fit: cover;
+        }
+        .portrait {
+            width: 222px;
+            height: 285px;
+            object-fit: cover;
+        }
+        .scaloni {
+            object-position: 50% 0%;
+        }
+        .trofeos {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .left {
+            float: left;
+            padding: 24px 24px 24px 0;
+        }
+        .right {
+            float: right;
+            padding: 24px 0 24px 24px;
+        }
+        .center {
+            width: 700px;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+            padding: 0 24px 24px 24px;
+        }
+    }
+}
+/* Fin main page histoire */
 
 /* Footer */
 footer {
@@ -223,10 +290,10 @@ footer {
 }
 /* Fin footer */
 
-/* // Computer (more than 1141px) */
+/* (Plus de 1141px) */
 @media (min-width: 1141px) {
     main {
-        .articles {
+        section.articles {
             .histoire {
                 background-image: url("./Images/background1.png");
                 background-position: 50% 45%;
@@ -251,7 +318,7 @@ footer {
     }
 }
 
-/* // Medium devices (tablets, less than 1140px) */
+/* (Moins de 1140px) */
 @media (max-width: 1140px) {
     .headerNavbar {
         .sidepanel {
@@ -266,25 +333,20 @@ footer {
         }
     }
     main {
-        .articles {
+        section.articles {
             background-image: url("./Images/ballon.png");
             background-repeat: no-repeat;
             background-position: 130% 30%;
-            padding: 24px 16px;
-            gap: 24px;
 
             .mobile {
                 display: none;
             }
-
-                .text {
-                    width: 60%;
-
-                    p {
-                        max-height: 12rem;
-                        -webkit-line-clamp: 12;
-                    }
-                }
+        }
+        section.histoire {
+            .paysage, .center, .trofeos {
+                width: 500px;
+                height: auto;
+            }
         }
     }
     footer {
@@ -295,80 +357,177 @@ footer {
             flex-direction: column;
             align-items: center;
             gap: 32px;
-      }
+        }
     }
 }
 
-/* // Small devices (landscape phones, less than 768px) */
+/* (Moins de 768px) */
 @media (max-width: 768px) {
     .headerNavbar {
         .navbar {
             h1 {
                 font-size: 24pt;
             }
+        }
     }
-}
     main {
         .todos {
             height: 250px;
         }
-        .articles {
+        section.articles {
             background-size: 80%;
-            padding: 16px 8px;
-            gap: 16px;
+            padding: 32px;
 
             img {
-                width: 125px;
-                height: 160px;
+                width: 200px;
+                height: 250px;
+                padding: 8px 16px;
             }
-            .text {
-                h2 {
-                    font-size: 12pt;
-            }
-                p {
-                    font-size: 10pt;
-                    max-height: 7rem;
-                    -webkit-line-clamp: 7;
+            .histoire, .worldcup, .phenomene, .avenir {
+                
+                .text {
+                    h2 {
+                        font-size: 12pt;
+                }
+                    p {
+                        font-size: 10pt;
+                        max-height: 12rem;
+                        -webkit-line-clamp: 12;
                     }
                 }
             }
+        }
+        section.histoire {
+            article {
+                padding: 32px 40px;
+            }
+            h2 {
+                padding-bottom: 16px;
+            }
+            .paysage, .center, .trofeos {
+                width: 400px;
+                height: auto;
+            }
+            .center {
+                display: flex;
+                float: left;
+            }
+        }
     }
-    
 }
 
-/* // Very small devices (less than 450px) */
-@media (max-width: 450px) {
+/* (Moins de 615px) */
+@media (max-width: 615px) {
+    .headerNavbar {
+        .navbar {
+            h1 {
+                font-size: 24pt;
+            }
+        }
+    }
+    main {
+        .todos {
+            height: 200px;
+        }
+        section.articles {
+            padding: 24px 32px;
+            gap: 24px;
+
+            img {
+                width: 150px;
+                height: 180px;
+            }
+            .histoire, .worldcup, .phenomene, .avenir {
+                .text p {
+                        max-height: 8rem;
+                        -webkit-line-clamp: 8;
+                }
+            }
+        }
+        section.histoire {
+            article {
+                padding: 24px 32px;
+            }
+            h2 {
+                padding-bottom: 16px;
+            }
+        }
+    }
+}
+
+/* (Moins de 530px) */
+@media (max-width: 530px) {
     .headerNavbar {
         .navbar {
             h1 {
                 font-size: 16pt;
             }
+        }
     }
-}
     main {
         .todos {
             height: 150px;
         }
         
-        .articles {
-            .text {
-                width: 40%;
+        section.articles {
+            img {
+                width: 120px;
+                height: 160px;
+            }
+            .histoire, .worldcup, .phenomene, .avenir {
+                .text {
+                    width: 50%;
 
-                img {
-                    width: 85px;
-                    height: 110px;
-                }
-                h2 {
-                    font-size: 9pt;
-                }
-                p {
-                    font-size: 7pt;
+                    h2 {
+                        font-size: 14pt;
+                    }
+                    p {
+                        font-size: 9pt;
+                        max-height: 7rem;
+                        -webkit-line-clamp: 7;
+                    }
                 }
             }
+        }
+
+            section.histoire {
+                    article {
+                        padding: 16px;
+                    }
+                    h2 {
+                        font-size: 14pt;
+                    }
+
+                .paysage, .center, .trofeos {
+                    width: 250px;
+                    height: auto;
+                }
             }
         
-    footer {
-        font-size: 6pt;
+        footer {
+            font-size: 6pt;
+        }
     }
 }
+
+/* (Moins de 400px) */
+@media (max-width: 400px) {
+    .headerNavbar {
+        .navbar {
+            h1 {
+                font-size: 14pt;
+            }
+        }
+    }
+    main {
+        
+        section.histoire {
+            padding: 0;
+
+            .portrait, .paysage, .center, .trofeos {
+                width: 150px;
+                height: auto;
+            }
+        }
+    }
 }
