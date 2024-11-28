@@ -367,6 +367,13 @@ footer {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+
+    a {
+      color: var(--secondary-color);
+      font-family: "Poiret One", serif;
+      letter-spacing: 1pt;
+      font-size: 14pt;
+    }
   }  
   article:first-of-type {
     font-variant: small-caps;
