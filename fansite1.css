@@ -6,6 +6,10 @@
       list-style-type: none;
       }
     border: none;
+
+    a:visited {
+      color: white;      
+    }
 }
 
 :root {
@@ -510,6 +514,17 @@ footer {
         justify-content: space-between;
         align-items: center;
         text-align: center;
+
+        a {
+          color: var(--secondary-color);
+          font-family: "Poiret One", serif;
+          letter-spacing: 1pt;
+          font-size: 14pt;
+        }
+
+        a:hover {
+          color: var(--blackpink-vibrant);
+        }
       }  
 
       /* article:first-of-type {
