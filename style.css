@@ -228,14 +228,21 @@ main {
               }
 
               button {
-                display: inline-block;
-                padding: 8px 32px;
-                border-radius: 4px;
-                font-size: 12pt;
-                text-transform: uppercase;
-
+                background: none;
+                border: none;
                     a {
+                      transition: all 0.4s ease;
                       color: var(--primary-color);
+                      display: inline-block;
+                      padding: 8px 32px;
+                      border-radius: 4px;
+                      font-size: 12pt;
+                      text-transform: uppercase;
+
+                      &:hover {
+                        transition: all 0.4s ease;
+                      }
+
                     }
               }
 
@@ -283,7 +290,13 @@ main {
           }
       
           button {
-            background: var(--blackpink);
+            a {
+              background: var(--blackpink);
+              &:hover {
+                color: white;
+                background: var(--lighter-primary-color);
+              }
+            }
           }
         }
       
@@ -297,7 +310,14 @@ main {
             }
       
             button {
-              background: var(--euromillions);
+              a {
+                background: var(--euromillions);
+                &:hover {
+                  color: white;
+                  background: var(--lighter-primary-color);
+                }
+              }
+              
             }
           } 
       
@@ -311,7 +331,15 @@ main {
             }
       
             button {
-              background: var(--argentina);
+              a {
+                background: var(--argentina);
+
+                &:hover {
+                  color: white;
+                  background: var(--lighter-primary-color);
+                }
+              }
+              
             }
           }           
       }
