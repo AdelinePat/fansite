@@ -104,7 +104,7 @@ main {
     p {
         font-family: "Montserrat", sans-serif;
     }
-    h2 {
+    h2, h3 {
         font-family: "argentina";
     }
      .todos {
@@ -240,6 +240,145 @@ main {
 }
 /* Fin main page histoire */
 
+/* Main page World Cup */
+main {
+    section.coupemonde {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 0 16px 0;
+        
+        article:nth-of-type(2n+3) {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .fifa {
+            display: flex;
+            background-color: var(--primary-color);
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+           h2 {
+            font-size: 26pt;
+            color: var(--secondary-color);
+            } 
+            img {
+            width: 222px;
+            height: 271px;
+            object-fit: contain;
+            }
+        }
+
+        article {
+            padding: 32px 48px;
+
+            h3 {
+                font-size: 20pt;
+                padding-bottom: 16px;
+            }
+            p {
+                text-align: justify;
+            }
+            .resultat {
+                width: 500px;
+                height: 280px;
+                object-fit: cover;
+            }
+            .left {
+                float: left;
+                padding: 24px 24px 24px 0;
+            }
+            .right {
+                float: right;
+                padding: 24px 0 24px 24px;
+
+            }
+            .centre {
+                display: block;
+                margin: auto;
+                padding: 24px;
+            }
+            .victoire {
+                width: 100%;
+                height: 100vh;
+                padding-top: 16px;
+            }
+            
+        }
+        .poule {
+            h3 {
+                padding-bottom: 8px;
+            }
+            p {
+                padding: 88px 0;
+            }
+        }
+        .finale {
+            p {
+                padding: 8px 0;
+            }
+        }
+    }
+/* Caroussel */
+    .carousel-container {
+        width: 95vw;
+        margin: 16px 24px;
+        padding: 8px 0;
+        overflow-x: auto;
+        display: flex;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+
+        div {
+            font-family: "Montserrat", sans-serif;
+            text-align: justify;
+            padding: 8px;
+
+            img {
+                height: 55vh;
+                padding-bottom: 8px;
+            }
+        }
+    }
+    
+    .carousel-container::-webkit-scrollbar {
+        height: 14px;
+        width: 100vw;
+    }
+    
+    .carousel-container::-webkit-scrollbar-track {
+        background: var(--secondary-color);
+        border: 1px solid var(--hover);
+        border-radius: 10px;
+    }
+    
+    .carousel-container::-webkit-scrollbar-thumb {
+        background: var(--hover);
+        border-radius: 10px;
+    }
+    
+    .carousel-slide {
+        flex: 1 0 30%;
+        aspect-ratio: 1;
+        flex-flow: column nowrap;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        scroll-snap-align: center;
+    }
+    .carousel-slide:nth-of-type(2n+1) {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+    }
+    .carousel-slide:nth-of-type(2n+2) {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+/* Fin caroussel */
+
+}
+/* Fin main page World cup */
+
 /* Footer */
 footer {
     background: var(--primary-color);
@@ -344,8 +483,13 @@ footer {
         }
         section.histoire {
             .paysage, .center, .trofeos {
-                width: 500px;
                 height: auto;
+            }
+            .center {
+                width: 100%;
+                display: flex;
+                margin: 0;
+                padding: 0 0 24px 0;
             }
         }
     }
@@ -379,8 +523,8 @@ footer {
             padding: 32px;
 
             img {
-                width: 200px;
-                height: 250px;
+                width: 40%;
+                height: auto;
                 padding: 8px 16px;
             }
             .histoire, .worldcup, .phenomene, .avenir {
@@ -404,13 +548,20 @@ footer {
             h2 {
                 padding-bottom: 16px;
             }
-            .paysage, .center, .trofeos {
-                width: 400px;
+            .paysage, .trofeos {
+                width: 100%;
                 height: auto;
             }
-            .center {
-                display: flex;
-                float: left;
+        }
+        .carousel-slide {
+            flex: 1 0 90%;
+          }
+        .section.coupemonde {
+            article {
+                .resultat {
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
     }
@@ -433,10 +584,6 @@ footer {
             padding: 24px 32px;
             gap: 24px;
 
-            img {
-                width: 150px;
-                height: 180px;
-            }
             .histoire, .worldcup, .phenomene, .avenir {
                 .text p {
                         max-height: 8rem;
@@ -470,10 +617,6 @@ footer {
         }
         
         section.articles {
-            img {
-                width: 120px;
-                height: 160px;
-            }
             .histoire, .worldcup, .phenomene, .avenir {
                 .text {
                     width: 50%;
@@ -490,19 +633,19 @@ footer {
             }
         }
 
-            section.histoire {
-                    article {
-                        padding: 16px;
-                    }
-                    h2 {
-                        font-size: 14pt;
-                    }
-
-                .paysage, .center, .trofeos {
-                    width: 250px;
-                    height: auto;
+        section.histoire {
+                article {
+                    padding: 16px;
                 }
-            }
+                h2 {
+                    font-size: 14pt;
+                }
+
+        }
+
+        .carousel-container {
+            width: 90vw;
+        }
         
         footer {
             font-size: 6pt;
@@ -520,14 +663,8 @@ footer {
         }
     }
     main {
-        
         section.histoire {
             padding: 0;
-
-            .portrait, .paysage, .center, .trofeos {
-                width: 150px;
-                height: auto;
-            }
         }
     }
 }
