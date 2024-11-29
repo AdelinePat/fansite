@@ -361,6 +361,38 @@ footer {
   flex-direction: row;
   justify-content: space-around;
 }
+
+  .menuFooter {
+    a {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  .menuBlackpink {
+    a {
+      &:hover {
+        color: var(--blackpink);
+      }
+    }
+  }
+
+  .menuEuroMillions {
+    a {
+      &:hover {
+        color: var(--euromillions);
+      }
+    }
+  }
+
+  .menuScaloneta {
+    a {
+      &:hover {
+        color: var(--argentina);
+      }
+    }
+  }
+
   article {
     display: flex;
     flex-direction: column;
@@ -378,6 +410,9 @@ footer {
   article:first-of-type {
     font-variant: small-caps;
   }
+
+  
+
   h2 {
     padding-bottom: 8px;
   }
