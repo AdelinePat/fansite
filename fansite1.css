@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: "primetime" ;
-  src: url(./images_blackping/Primetime.ttf);
+  src: url(./images_blackpink/Primetime.ttf);
 }
 
 /* Creation de l'animation du header - effet néon clignottant */
@@ -85,7 +85,6 @@
       animation: flicker 7s infinite;
       filter:brightness(1);
       position: relative;
-      top: 45vh;
     }
 
     nav {
@@ -555,24 +554,27 @@ footer {
   .headerNavbar {
       h1 {
       font-size: 112pt;
+      top: 45vh;
     }                                                                        
   }
 }
 
 /* Ecran d'ordinateur 983*/
-@media screen and (min-width: 981px) and (max-width: 1199px) {
+@media screen and (min-width: 991px) and (max-width: 1199px) {
 
   .headerNavbar {
     h1 {
       font-size: 72pt;
+      top: 45vh;
     }    
   }
+  
 }
 
-@media screen and (min-width: 981px)  {
+@media screen and (min-width: 991px)  {
 
   .headerNavbar {
-    background: url(./images_blackping/blackpink9.jpg) 50% 20% no-repeat fixed;
+    background: url(./images_blackpink/blackpink9.jpg) 50% 20% no-repeat fixed;
     background-size: cover;
 
       nav {
@@ -587,96 +589,46 @@ footer {
               transition: color .2s ease;
               line-height: 20px;
 
-                
-              /* &:before, &:after {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 0px;
-                height: 1px;
-                box-sizing: border-box;
+                &::before, &::after {
+                    content: '';
+                    display: block;
+                    position: relative;
+                    width: 0;
+                    right: 0;
+                    height: 1px;
+                  }
 
+                  &::before {
+                    transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+                    background: var(--blackpink);
+                    top: 29px;
 
-                &:hover {
-                  width: 100%;
-                  left: 0;
+                  }
+
+                  &::after {
+                    transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+                    background: var(--blackpink-vibrant);
+                    top: 8px;
+                  }
+
+                  &:hover {
+                    color: var(--blackpink-vibrant);
+                     &::before, &::after {
+                          width: 100%;
+                          box-sizing: border-box;
+                      }
                 }
-              }
-    
-              &:before {
-                top: calc(100% - 10px);
-              }
-    
-              &:after {
-                top: calc(100% - 10px);
-              }
-    
+            }
+
+            a.active {
               &:hover {
-                color: var(--blackpink-vibrant)!important;
-                width: 100%;
-                left: 0;
-    
-                &:before {
-                  transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-                  background: var(--blackpink);
-                  
-                  }
-    
-                &:after {
-                  transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;         
-                  background: var(--blackpink-vibrant);
-                  height: 1px;
-                  width: 100%; 
-                  }
-              } */
-            }
-
-            a::before, a::after {
-              content: '';
-              display: block;
-              position: relative;
-              
-              width: 0;
-              right: 0;
-              height: 1px;
-              box-sizing: border-box!important;
-            }
-
-            a::before {
-              transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
-              background: var(--blackpink);
-              top: 29px;
-
-            }
-
-            a::after {
-              transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-              background: var(--blackpink-vibrant);
-              top: 8px;
- 
-
-            }
-
-            a:hover {
-              color: var(--blackpink-vibrant);
-          }
-
-          a:hover::before, a:hover::after {
-              width: 100%;
-              box-sizing: border-box;
-          }
-          
-
-            /* .active {
+                color: var(--blackpink-vibrant);       
+              }
               &:before {
-                content: "";
-                display: block;
-                position: relative;
-                height: 1.5px;
                 width: 100%;
                 background: var(--blackpink);
               }
-            } */
+            } 
           }
         }
 
@@ -840,7 +792,7 @@ footer {
     }
 
     #galerie {
-      background: url(./images_blackping/concert-3792293-hd_1280_720_24fps.mp4);
+      
         article {
         justify-content: space-between;
         z-index: 1;
@@ -874,16 +826,18 @@ footer {
  
 
 /* Ecran de tablette et téléphone 1111px */
-@media screen and (max-width: 981px) {
+@media screen and (max-width: 991px) {
 
   .headerNavbar {
-    background: url(./images_blackping/blackpink2.jpg) 50% 20% no-repeat;
-    object-fit: fill;
+    background: url(./images_blackpink/blackpink2.jpg) 50% 0% no-repeat;
+    background-size: cover;
+    /* object-fit: fill; */
     height: 100vh;
     box-sizing: border-box;
 
     h1 {
       font-size: 52pt;
+      top: 55vh;
     }
 
     nav {
