@@ -40,8 +40,10 @@
     <main>
         <section id="contact">
             <h1>Formulaire de Contact</h1>
+            
             <form method="post" action="traitement.php">
                 <!-- Champs de base obligatoires : -->
+                <p><strong>*</strong> champs non-obligatoire</p>
                 
                 <fieldset id="contacter">
                     <div>
@@ -83,7 +85,7 @@
 
                     <!-- Ajouter un fichier : -->
                     <div>
-                        <label for="fichier">Joindre un fichier :</label>
+                        <label for="fichier">Joindre un fichier : <strong>*</strong></label>
                         <input type="file" name="fichier" id="fichier" accept=".jpg,.png,.pdf,.docx">
                     </div>
 

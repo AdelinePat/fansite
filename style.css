@@ -280,11 +280,15 @@ main {
               }
         }
 
+       
+
         form {
           font-family: "Montserrat", sans-serif;
           font-size: 13pt;
           max-width: 100%;
           box-sizing: border-box;
+
+          
 
           fieldset  {
             max-width: 100%;
@@ -383,6 +387,20 @@ main {
 
           
 
+        }
+        
+        /* Précision des champs non-obligatoire dans le formulaire contact */
+        #contact {
+          p:first-of-type {
+            width: 100%;
+            box-sizing: border-box;
+            text-align: right;
+          }
+
+          strong {
+            color: red; 
+            font-weight:normal;
+          }
         }
   
         .blackpink, .euro, .Scaloneta {
