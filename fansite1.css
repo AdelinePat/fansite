@@ -593,26 +593,30 @@ footer {
                     content: '';
                     display: block;
                     position: relative;
-                    width: 0;
-                    right: 0;
-                    height: 1px;
-                  }
-
-                  &::before {
-                    transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
-                    background: var(--blackpink);
-                    top: 29px;
-
+                    width: 0px;
+                    right: 0px;
+                    /* height: 1px; */
+                    height: 2px;
                   }
 
                   &::after {
-                    transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-                    background: var(--blackpink-vibrant);
+                    transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+                    background: var(--blackpink);
+                    /* top: 29px; */
                     top: 8px;
+                    z-index: 2;
+                  }
+
+                  &::before {
+                    transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+                    background: white;
+                    /* top: 8px; */
+                    top: 30px;
+                    z-index: 2;
                   }
 
                   &:hover {
-                    color: var(--blackpink-vibrant);
+                    color: var(--blackpink);
                      &::before, &::after {
                           width: 100%;
                           box-sizing: border-box;
