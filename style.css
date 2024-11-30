@@ -222,7 +222,8 @@ main {
 
               .lien {
                 display: flex;
-                flex-flow: row nowrap;
+                flex-flow: row wrap;
+                row-gap: 16px;
                 justify-content: space-evenly;
                 margin-top: 32px;
               }
@@ -274,6 +275,15 @@ main {
                       z-index: 0;
                     }        
               }
+        }
+
+        form {
+          background: red;
+
+          input {
+            background: green;
+          }
+
         }
   
         .blackpink, .euro, .Scaloneta {
@@ -346,6 +356,10 @@ main {
   section:last-of-type {
     margin-bottom: none;
   }
+
+                                                                                      #contact {
+
+                                                                                      }
   
       :has(span) {
         .blackpink {
