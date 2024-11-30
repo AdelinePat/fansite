@@ -585,44 +585,89 @@ footer {
           li {
             a {
               transition: color .2s ease;
-              
-              &:before, &:after {
+              line-height: 20px;
+
+                
+              /* &:before, &:after {
                 content: "";
                 display: block;
-                position: relative;
+                position: absolute;
                 width: 0px;
-                height: 0px;
+                height: 1px;
+                box-sizing: border-box;
+
+
+                &:hover {
+                  width: 100%;
+                  left: 0;
+                }
               }
     
               &:before {
-                top: 32px;
+                top: calc(100% - 10px);
               }
     
               &:after {
-                top: 9px;
+                top: calc(100% - 10px);
               }
     
               &:hover {
                 color: var(--blackpink-vibrant)!important;
-                padding-bottom: 14px;
+                width: 100%;
+                left: 0;
     
                 &:before {
                   transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
                   background: var(--blackpink);
-                  height: 1.5px;
-                  width: 100%;
+                  
                   }
     
                 &:after {
                   transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;         
                   background: var(--blackpink-vibrant);
-                  height: 1.5px;
+                  height: 1px;
                   width: 100%; 
                   }
-              }
+              } */
             }
 
-            .active {
+            a::before, a::after {
+              content: '';
+              display: block;
+              position: relative;
+              
+              width: 0;
+              right: 0;
+              height: 1px;
+              box-sizing: border-box!important;
+            }
+
+            a::before {
+              transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+              background: var(--blackpink);
+              top: 29px;
+
+            }
+
+            a::after {
+              transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+              background: var(--blackpink-vibrant);
+              top: 8px;
+ 
+
+            }
+
+            a:hover {
+              color: var(--blackpink-vibrant);
+          }
+
+          a:hover::before, a:hover::after {
+              width: 100%;
+              box-sizing: border-box;
+          }
+          
+
+            /* .active {
               &:before {
                 content: "";
                 display: block;
@@ -631,7 +676,7 @@ footer {
                 width: 100%;
                 background: var(--blackpink);
               }
-            }
+            } */
           }
         }
 
