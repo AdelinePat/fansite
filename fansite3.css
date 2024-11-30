@@ -14,7 +14,6 @@
     --tertiary-color: #000000;
     --quaternary-color : #FFB81C;
     --quinary-color: #7D4016;
-    --hover: #002f5c;
 }
 
 @font-face {
@@ -47,7 +46,7 @@
             cursor: default;
         }
         .openbtn:hover {
-            color: var(--hover);
+            color: var(--tertiary-color);
         }
         .openbtn {
             font-size: 36pt;
@@ -61,7 +60,7 @@
 .sidepanel  {
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     height: 100vh;
     top: 0;
     right: 0;
@@ -84,10 +83,10 @@
         padding: 24px 48px;
     }
     ul li.active a {
-        color: var(--hover);
+        color: var(--tertiary-color);
     }
     a:hover {
-        color: var(--hover);
+        color: var(--tertiary-color);
     }
     .closebtn {
         position: absolute;
@@ -99,7 +98,7 @@
 }
 /* Fin navbar et menu */
 
-/* Main page accueil*/
+/* Page accueil*/
 main {
     p {
         font-family: "Montserrat", sans-serif;
@@ -107,12 +106,12 @@ main {
     h2, h3 {
         font-family: "argentina";
     }
-     .todos {
+    .todos {
             width: 100vw;
-            height: 350px;
+            height: 50vh;
             object-fit: cover;
             object-position: 50% 65%;
-        }
+    }
         
     section.articles {
         display: flex;
@@ -134,7 +133,7 @@ main {
             display: flex;
             justify-content: space-around;
         }
-        .histoire, .worldcup, .phenomene, .avenir {
+        .histoire, .worldcup, .phenomene {
             transition: transform .2s;
             max-height: 300px;
 
@@ -149,14 +148,14 @@ main {
                 -webkit-line-clamp: 14;
             }
         }
-        .histoire:hover, .worldcup:hover, .phenomene:hover, .avenir:hover {
+        .histoire:hover, .worldcup:hover, .phenomene:hover {
             transform: scale(1.02);
         }   
-        .histoire img, .phenomene img, .avenir img {
-                object-fit: cover;
+        .histoire img, .phenomene img {
+            object-fit: cover;
         }
         .worldcup img {
-                object-fit: contain;
+            object-fit: contain;
         }
         .text {
             width: 50%;
@@ -179,18 +178,14 @@ main {
         }
     }
 }
-/* Fin main page accueil */
+/* Fin page accueil */
 
-/* Main page histoire*/
+/* Main*/
 main {
-    section.histoire {
+    section.histoire, section.coupemonde, section.celebrations {
         display: flex;
         flex-direction: column;
 
-        article:nth-of-type(2n+2) {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-        }
         article {
             padding: 40px 48px;
         }
@@ -220,6 +215,13 @@ main {
             height: 300px;
             object-fit: cover;
         }
+        .center {
+            width: 700px;
+            height: 350px;
+            padding: 0 24px 24px 24px;
+            display: block;
+            margin: auto;
+        }
         .left {
             float: left;
             padding: 24px 24px 24px 0;
@@ -228,32 +230,33 @@ main {
             float: right;
             padding: 24px 0 24px 24px;
         }
-        .center {
-            width: 700px;
-            height: 350px;
-            object-fit: cover;
-            display: block;
-            margin: auto;
-            padding: 0 24px 24px 24px;
+        .video {
+            width: 100%;
+            height: 90vh;
+            padding-top: 16px;
         }
     }
-}
-/* Fin main page histoire */
 
-/* Main page World Cup */
-main {
-    section.coupemonde {
-        display: flex;
-        flex-direction: column;
-        padding: 32px 0 16px 0;
-        
-        article:nth-of-type(2n+3) {
+    section.histoire, section.celebrations {
+        padding-top: 0;
+    }
+
+    section.histoire {
+        article:nth-of-type(2n+2) {
             background-color: var(--primary-color);
             color: var(--secondary-color);
         }
-
+        .center {
+            object-fit: cover;
+        }
+    }
+        
+    section.coupemonde {
+        padding: 32px 0 16px 0;
+        
         .fifa {
             display: flex;
+            flex-direction: row;
             background-color: var(--primary-color);
             justify-content: center;
             align-items: center;
@@ -261,49 +264,26 @@ main {
            h2 {
             font-size: 26pt;
             color: var(--secondary-color);
+            text-align: center;
             } 
             img {
-            width: 222px;
-            height: 271px;
+            width: 15%;
             object-fit: contain;
             }
+        } 
+
+        h3 {
+            text-align: center;
+            font-size: 20pt;
+            padding-bottom: 16px;
         }
 
-        article {
-            padding: 32px 48px;
-
-            h3 {
-                font-size: 20pt;
-                padding-bottom: 16px;
-            }
-            p {
-                text-align: justify;
-            }
-            .resultat {
-                width: 500px;
-                height: 280px;
-                object-fit: cover;
-            }
-            .left {
-                float: left;
-                padding: 24px 24px 24px 0;
-            }
-            .right {
-                float: right;
-                padding: 24px 0 24px 24px;
-
-            }
-            .centre {
-                display: block;
-                margin: auto;
-                padding: 24px;
-            }
-            .victoire {
-                width: 100%;
-                height: 100vh;
-                padding-top: 16px;
-            }
-            
+        article:nth-of-type(2n+3) {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        .center {
+            object-fit: contain;
         }
         .poule {
             h3 {
@@ -319,7 +299,15 @@ main {
             }
         }
     }
-/* Caroussel */
+
+    section.celebrations {
+        article:nth-of-type(2n+2) {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+    }  
+   
+/* Caroussel équipe */
     .carousel-container {
         width: 95vw;
         margin: 16px 24px;
@@ -348,13 +336,14 @@ main {
     
     .carousel-container::-webkit-scrollbar-track {
         background: var(--secondary-color);
-        border: 1px solid var(--hover);
+        border: 1px solid var(--tertiary-color);
         border-radius: 10px;
     }
     
     .carousel-container::-webkit-scrollbar-thumb {
-        background: var(--hover);
+        background: var(--tertiary-color);
         border-radius: 10px;
+        cursor: pointer;
     }
     
     .carousel-slide {
@@ -365,6 +354,10 @@ main {
         justify-content: flex-start;
         align-items: center;
         scroll-snap-align: center;
+
+        h2 {
+            color: var(--tertiary-color);
+        }
     }
     .carousel-slide:nth-of-type(2n+1) {
         background-color: var(--primary-color);
@@ -374,10 +367,219 @@ main {
         background-color: var(--secondary-color);
         color: var(--primary-color);
     }
-/* Fin caroussel */
+/* Fin caroussel équipe */
 
+/* Caroussel phénomène */
+    section.carousel-celebrations {
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+
+        .carousel-item {
+            h2 {
+                font-size: 30pt;
+            }
+            .blanc {
+                color: var(--secondary-color);
+            }
+            p {
+                font-size: 20pt;
+            }
+        }
+        
+        article.monde {
+            h2 {
+                text-align: center;
+                padding-bottom: 24px;
+            }
+        }
+
+        .carousel-wrapper {
+            position:relative;
+            width: 90vw;
+            height: 85vh;
+            margin:0 auto;
+        }
+
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 25px 50px;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+        .arrow {
+            border: solid var(--tertiary-color);
+            border-width: 0 6px 6px 0;
+            display: inline-block;
+            padding: 12px;
+        }
+          
+        .arrow-prev {
+            left: -30px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(135deg);
+        }
+           
+        .arrow-next {
+            right: -30px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+          
+        /*Select every element*/
+        [id^="item"], [id^="pic"] {
+            display: none;
+        }
+          
+        .item-1 {
+            z-index: 1;
+            opacity: 1;
+            background: url('./Images/1.jpg');
+            background-size: cover;
+            background-position: 50% 55%;
+        }
+        .item-2 {
+            background: url('./Images/2.jpg');
+            background-size: cover;
+            background-position: 50% 55%;
+        }
+        .item-3 {
+            background: url('./Images/3.webp');
+            background-size: cover;
+        }
+        .item-4 {
+            background: url('./Images/4.jpg');
+            background-size: cover;
+            background-position: 50% 55%;
+        }
+        .item-5 {
+            background: url('./Images/5.jpeg');
+            background-size: cover;
+        }
+        .item-6 {
+            background: url('./Images/6.jpeg');
+            background-size: cover;
+        }
+        .item-7 {
+            background: url('./Images/7.jpeg');
+            background-size: cover;
+            background-position: 50% 42%;
+        }
+        .item-8 {
+            background: url('./Images/8.webp');
+            background-size: cover;
+        }
+        .item-9 {
+            background: url('./Images/9.jpeg');
+            background-size: cover;
+            background-position: 50% 5%;
+        }
+        .item-10 {
+            background: url('./Images/10.jpg');
+            background-size: cover;
+        }
+        .item-11 {
+            background: url('./Images/11.jpeg');
+            background-size: cover;
+            background-position: 50% 80%;
+        }
+        .item-12 {
+            background: url('./Images/evacuacion.jpg');
+            background-size: cover;
+            background-position: 50% 40%;
+        }
+
+        .pic-1 {
+            z-index: 1;
+            opacity: 1;
+            background: url('./Images/cordoba.webp');
+            background-size: cover;
+        }
+        .pic-2 {
+            background: url('./Images/rosario.jpeg');
+            background-size: cover;
+            background-position: 50% 60%;
+        }
+        .pic-3 {
+            background: url('./Images/mar-del-plata.jpg');
+            background-size: cover;
+        }
+        .pic-4 {
+            background: url('./Images/jujuy.jpg');
+            background-size: cover;
+            background-position: 50% 40%;
+        }
+        .pic-5 {
+            background: url('./Images/bangladesh2.jpg');
+            background-size: cover;
+            background-position: 50% 55%;
+        }
+        .pic-6 {
+            background: url('./Images/bangladesh.jpg');
+            background-size: cover;
+            background-position: 50% 40%;
+        }
+        .pic-7 {
+            background: url('./Images/naples.webp');
+            background-size: cover;
+            background-position: 50% 60%;
+        }
+        .pic-8 {
+            background: url('./Images/barcelona.jpg');
+            background-size: cover;
+            background-position: 50% 60%;
+        }
+        .pic-9 {
+            background: url('./Images/madrid.webp');
+            background-size: cover;
+        }
+        .pic-10 {
+            background: url('./Images/sydney.webp');
+            background-size: cover;
+            background-position: 50% 70%;
+        }
+        .pic-11 {
+            background: url('./Images/New-York.webp');
+            background-size: cover;
+            background-position: 50% 60%;
+        }
+        .pic-12 {
+            background: url('./Images/paris.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-color: var(--secondary-color);
+        }
+          
+        *:target ~ .item-1, *:target ~ .pic-1 {
+            opacity: 0;
+        }
+          
+        #item-1:target ~ .item-1, #pic-1:target ~ .pic-1 {
+            opacity: 1;
+        }
+          
+        #item-2:target ~ .item-2, #item-3:target ~ .item-3, 
+        #item-4:target ~ .item-4, #item-5:target ~ .item-5, #item-6:target ~ .item-6,
+        #item-7:target ~ .item-7, #item-8:target ~ .item-8, #item-9:target ~ .item-9,
+        #item-10:target ~ .item-10, #item-11:target ~ .item-11, #item-12:target ~ .item-12,
+        #pic-2:target ~ .pic-2, #pic-3:target ~ .pic-3, 
+        #pic-4:target ~ .pic-4, #pic-5:target ~ .pic-5, #pic-6:target ~ .pic-6,
+        #pic-7:target ~ .pic-7, #pic-8:target ~ .pic-8, #pic-9:target ~ .pic-9,
+        #pic-10:target ~ .pic-10, #pic-11:target ~ .pic-11, #pic-12:target ~ .pic-12 {
+            z-index: 2;
+            opacity: 1;
+        }
+    }  
+/* Fin caroussel phénomène */
 }
-/* Fin main page World cup */
+/* Fin main */
 
 /* Footer */
 footer {
@@ -417,8 +619,17 @@ footer {
             color: var(--secondary-color);
         }
         h2 a:hover, ul li a:hover {
-            color: var(--hover);
-          }
+            color: var(--tertiary-color);
+        }
+        li.limonade a:hover {
+            color: var();
+        }
+        li.blackpink a:hover {
+            color: var();
+        }
+        li.euromillions a:hover {
+            color: var(--quaternary-color);
+        }
 }
     p {
         font-family: "Poiret One", serif;
@@ -448,29 +659,12 @@ footer {
                 background-size: cover;
                 background-position: 50% 40%;
             }
-            .avenir {
-                background-image: url("./Images/background4.png");
-                background-size: cover;
-                background-position: 50% 35%;
-            }
         }
     }
 }
 
 /* (Moins de 1140px) */
 @media (max-width: 1140px) {
-    .headerNavbar {
-        .sidepanel {
-            opacity: 1;
-
-            a {
-                font-size: 14pt;
-            }
-            .closebtn {
-                font-size: 36px;
-            }
-        }
-    }
     main {
         section.articles {
             background-image: url("./Images/ballon.png");
@@ -481,17 +675,128 @@ footer {
                 display: none;
             }
         }
-        section.histoire {
-            .paysage, .center, .trofeos {
+        section.histoire, section.coupemonde, section.celebrations {
+            article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+
+/* (Moins de 768px) */
+@media (max-width: 768px) {
+    .headerNavbar {
+        .sidepanel {
+            a {
+                font-size: 14pt;
+            }
+            .closebtn {
+                font-size: 36px;
+            }
+        }
+        .navbar {
+            h1 {
+                font-size: 24pt;
+            }
+        }
+    }
+
+    main {
+        .todos {
+            height: 40vh;
+        }
+        
+        section.articles {
+            background-size: 80%;
+            padding: 32px;
+
+            img {
+                width: 30%;
+            }
+
+            .histoire, .worldcup, .phenomene {
+                .text {
+                    width: 60%;
+                    p {
+                        max-height: 12rem;
+                        -webkit-line-clamp: 12;
+                    }
+                }
+            }
+        }
+
+        section.histoire, section.coupemonde, section.celebrations {
+            article {
+                padding: 32px 40px;
+            }
+            h2 {
+                padding-bottom: 0;
+            }
+            .paysage, .trofeos, .portrait, .center {
+                width: 100%;
                 height: auto;
             }
             .center {
-                width: 100%;
-                display: flex;
-                margin: 0;
-                padding: 0 0 24px 0;
+                padding: 16px 0;
+            }
+            .left, .right {
+                float: none;
+                padding: 16px 0;
+            }
+            .video {
+                height: 50vh;
             }
         }
+
+        section.histoire {
+            h2 {
+                padding-bottom: 16px;
+            }
+        }
+
+        section.carousel-celebrations {
+            padding: 24px;
+
+            .carousel-item {
+                h2 {
+                    font-size: 20pt;
+                }
+                p {
+                    font-size: 16pt;
+                }
+            }
+    
+            .carousel-wrapper {
+                width: 80vw;
+                height: 65vh;
+            }
+    
+            .arrow {
+                padding: 8px;
+            }
+
+            .arrow-prev {
+                left: -20px;
+            }
+               
+            .arrow-next {
+                right: -20px;
+            }
+        }
+
+        section.coupemonde {
+            .poule {
+                p {
+                    padding: 0;
+                }
+            }
+        }
+
+        .carousel-slide {
+            flex: 1 0 60%;
+          }
     }
     footer {
         font-size: 8pt;
@@ -505,119 +810,25 @@ footer {
     }
 }
 
-/* (Moins de 768px) */
-@media (max-width: 768px) {
-    .headerNavbar {
-        .navbar {
-            h1 {
-                font-size: 24pt;
-            }
-        }
-    }
-    main {
-        .todos {
-            height: 250px;
-        }
-        section.articles {
-            background-size: 80%;
-            padding: 32px;
-
-            img {
-                width: 40%;
-                height: auto;
-                padding: 8px 16px;
-            }
-            .histoire, .worldcup, .phenomene, .avenir {
-                
-                .text {
-                    h2 {
-                        font-size: 12pt;
-                }
-                    p {
-                        font-size: 10pt;
-                        max-height: 12rem;
-                        -webkit-line-clamp: 12;
-                    }
-                }
-            }
-        }
-        section.histoire {
-            article {
-                padding: 32px 40px;
-            }
-            h2 {
-                padding-bottom: 16px;
-            }
-            .paysage, .trofeos {
-                width: 100%;
-                height: auto;
-            }
-        }
-        .carousel-slide {
-            flex: 1 0 90%;
-          }
-        .section.coupemonde {
-            article {
-                .resultat {
-                    width: 100%;
-                    height: auto;
-                }
-            }
-        }
-    }
-}
-
-/* (Moins de 615px) */
-@media (max-width: 615px) {
-    .headerNavbar {
-        .navbar {
-            h1 {
-                font-size: 24pt;
-            }
-        }
-    }
-    main {
-        .todos {
-            height: 200px;
-        }
-        section.articles {
-            padding: 24px 32px;
-            gap: 24px;
-
-            .histoire, .worldcup, .phenomene, .avenir {
-                .text p {
-                        max-height: 8rem;
-                        -webkit-line-clamp: 8;
-                }
-            }
-        }
-        section.histoire {
-            article {
-                padding: 24px 32px;
-            }
-            h2 {
-                padding-bottom: 16px;
-            }
-        }
-    }
-}
-
 /* (Moins de 530px) */
 @media (max-width: 530px) {
     .headerNavbar {
         .navbar {
             h1 {
-                font-size: 16pt;
+                font-size: 18pt;
             }
         }
     }
     main {
         .todos {
-            height: 150px;
+            height: 30vh;
         }
         
         section.articles {
-            .histoire, .worldcup, .phenomene, .avenir {
+            .histoire, .worldcup, .phenomene {
+                img {
+                    height: 30vh;
+                }
                 .text {
                     width: 50%;
 
@@ -625,27 +836,41 @@ footer {
                         font-size: 14pt;
                     }
                     p {
-                        font-size: 9pt;
-                        max-height: 7rem;
-                        -webkit-line-clamp: 7;
+                        max-height: 8rem;
+                        -webkit-line-clamp: 8;
                     }
                 }
             }
         }
 
-        section.histoire {
+        section.histoire, section.coupemonde, section.celebrations {
                 article {
                     padding: 16px;
                 }
+                h2, h3 {
+                    font-size: 14pt;
+                }
+        }
+
+        section.coupemonde {
+            .fifa {
+                h2 {
+                    font-size: 16pt;
+                }
+            }
+        }
+
+        section.carousel-celebrations {
+            .carousel-item, .monde {
                 h2 {
                     font-size: 14pt;
                 }
-
-        }
-
-        .carousel-container {
-            width: 90vw;
-        }
+            }
+    
+            .carousel-wrapper {
+                height: 30vh;
+            }
+        } 
         
         footer {
             font-size: 6pt;
@@ -653,18 +878,18 @@ footer {
     }
 }
 
-/* (Moins de 400px) */
-@media (max-width: 400px) {
+/* (Moins de 335px) */
+@media (max-width: 335px) {
     .headerNavbar {
         .navbar {
             h1 {
                 font-size: 14pt;
             }
         }
-    }
-    main {
-        section.histoire {
-            padding: 0;
+        .sidepanel {
+            a {
+                padding-left: 80px;
+            }
         }
     }
 }
