@@ -90,7 +90,7 @@
                     <!-- Entrer un message avec du texte libre : -->
                     <div>
                         <label for="message">Votre message :</label><br>
-                        <textarea name="message" id="message" required></textarea>
+                        <textarea name="message" id="message" required rows="5"></textarea>
                     </div>
 
                     <!-- Champs masqués antispam : Pour détecter les robots spam : -->
@@ -154,4 +154,14 @@
         <p class="copyright">Limonade © 2024 - Tous droits réservés.</p>
     </footer>
 </body>
+
+<script>
+    const menuHamburger = document.querySelector("#menu-hamburger")
+    const navLinks = document.querySelector(".nav-link")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
+
 </html>
