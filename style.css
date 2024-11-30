@@ -12,7 +12,7 @@
 :root {
     --primary-color: #111111;
     --secondary-color : #D8D8D8;
-    --lighter-primary-color: #303030;
+    --lighter-primary-color: rgb(48, 48, 48);
     --blackpink : #EFA7B5;
     --euromillions : #EEBB05;
     --argentina : #6CACE4;
@@ -50,9 +50,6 @@
       align-items: center;
       padding: 0px 32px;
       max-height:fit-content;
-      /* position: absolute;
-      top: 5px;
-      left: 15px; */   
     }
 
     h2 {
@@ -81,6 +78,12 @@
           font-size: 14pt;
           font-weight: bolder;
           padding: 16px;
+          opacity: 1;
+          transition: all 0.2s ease;
+
+          &:hover {
+            opacity: 0.6;
+          }
         }
       }
 
@@ -278,11 +281,107 @@ main {
         }
 
         form {
-          background: red;
+          font-family: "Montserrat", sans-serif;
+          font-size: 13pt;
+          max-width: 100%;
+          box-sizing: border-box;
 
-          input {
-            background: green;
+          fieldset  {
+            max-width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 24px;
+            
+            label {
+              font-weight: 500;
+              margin-top: 16px;
+            }
+
+            input {
+
+            }
+
+              div {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 4px;
+              }
+
+              input, textarea, select {
+                padding: 8px;
+                border-radius: 4px;
+                font-family: "Montserrat", sans-serif;
+                font-size: 12pt;
+                box-sizing: border-box;
+                width: 100%;
+              }
+
+              input[type="text"], textarea, input[type="tel"], input[type="email"], select {
+                border: 1px solid rgba(48, 48, 48, 0.5);
+                background: rgba(241, 241, 241, 0.6);
+              }
+
+              select {
+                text-align: center;
+
+
+                /* option { */
+                option {
+                  background: white;
+
+
+                }
+                   &:hover {
+                    background: rgba(48,48,48,0.2);
+                  
+                  }
+                /* } */
+
+               
+              }
+
+              input[type="file"] {
+               width: calc(100% - 18px);
+                  &:hover {
+                    background: rgba(48,48,48,0.2);
+                  }
+                } 
+              }
+                
+
+              
           }
+
+          
+          #contacter {
+            display: grid;
+          }
+
+          #validation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+
+            button {
+              background: var(--euromillions);
+              display: inline-block;
+              padding: 8px 16px;
+              border-radius: 8px;
+              font-family: "Montserrat", serif;
+              font-weight: 500;
+              font-size: 16pt;
+              transition: all 0.4s ease;
+
+              &:hover {
+                cursor: pointer;
+                background: var(--lighter-primary-color);
+                color: var(--secondary-color)
+              }
+             
+            }
+          }
+
+          
 
         }
   
@@ -386,7 +485,7 @@ main {
         }
   }
 
-  }
+
 /* Fin style de main */
 
 /* Footer */
@@ -501,6 +600,14 @@ footer {
 
 
         }
+
+      form {
+        #contacter {
+                  grid-template: 1fr 1fr / 1fr 1fr;
+                  column-gap: 24px;
+                }
+      }
+
     }
 
     /* style des section paires */
@@ -556,9 +663,7 @@ footer {
 
 /* Ecran de tablette et téléphone */
 @media screen and (max-width: 1111px) {
-                                                                                        /* .headerNavbar {
-                                                                                          margin-bottom: 32px;
-                                                                                        } */
+                                                                                        
   
   main {
       section {
@@ -575,6 +680,14 @@ footer {
           align-items: center;
           width: calc(100vw- 64px);
           }
+
+        #contacter {
+          grid-template: 1fr 1fr 1fr 1fr / 1fr ;
+          column-gap: 24px;
+        }
+
+        #message {
+        }
     }
 
   } 

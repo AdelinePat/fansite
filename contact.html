@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de Contact</title>
     <link href="style.css" rel="stylesheet"> <!-- Lien vers ton fichier CSS -->
+    <link rel="icon" type="image/x-icon" href="./images/limonade.ico">
 
     <!-- Ajout des polices Monserrat et Poiret One -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,66 +42,74 @@
             <h1>Formulaire de Contact</h1>
             <form method="post" action="traitement.php">
                 <!-- Champs de base obligatoires : -->
-                <p>
-                    <label for="prenom">Votre Prénom :</label>
-                    <input type="text" name="prenom" id="prenom" required>
-                </p>
-                <p>
-                    <label for="nom">Votre Nom :</label>
-                    <input type="text" name="nom" id="nom" required>
-                </p>
-                <p>
-                    <label for="email">Votre Adresse e-mail :</label>
-                    <input type="email" name="email" id="email" required>
-                </p>
-                <p>
-                    <label for="sujet">Votre Sujet :</label>
-                    <input type="text" name="sujet" id="sujet" required>
-                </p>
-                <p>
-                    <label for="telephone">Votre Numéro de Téléphone :</label>
-                    <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}" required>
-                </p>
+                
+                <fieldset id="contacter">
+                    <div>
+                        <label for="prenom">Votre Prénom :</label>
+                        <input type="text" name="prenom" id="prenom" required>
+                    </div>
+                    <div>
+                        <label for="nom">Votre Nom :</label>
+                        <input type="text" name="nom" id="nom" required>
+                    </div>
+                    <div>
+                        <label for="email">Votre Adresse e-mail :</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="telephone">Votre Numéro de Téléphone :</label>
+                        <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}" required>
+                    </div>
+                </fieldset>
+                
+                <fieldset id="message">
+                    <div>
+                        <label for="sujet">Votre Sujet :</label>
+                        <input type="text" name="sujet" id="sujet" required>
+                    </div>
+                    
 
-                <!-- Sélection de la catégorie : -->
-                <p>
-                    <label for="categorie">Sélectionnez la catégorie suivante :</label>
-                    <select name="categorie" id="categorie" required>
-                        <option value="" disabled selected>-- Choisissez une catégorie --</option>
-                        <option value="support">Support technique</option>
-                        <option value="question">Question générale</option>
-                        <option value="reclamation">Réclamation</option>
-                        <option value="autre">Autre</option>
-                    </select>
-                </p>
+                    <!-- Sélection de la catégorie : -->
+                    <div>
+                        <label for="categorie">Sélectionnez la catégorie suivante :</label>
+                        <select name="categorie" id="categorie" required>
+                            <option value="" disabled selected>-- Choisissez une catégorie --</option>
+                            <option value="support">Support technique</option>
+                            <option value="question">Question générale</option>
+                            <option value="reclamation">Réclamation</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
 
-                <!-- Ajouter un fichier : -->
-                <p>
-                    <label for="fichier">Joindre un fichier :</label>
-                    <input type="file" name="fichier" id="fichier" accept=".jpg,.png,.pdf,.docx">
-                </p>
+                    <!-- Ajouter un fichier : -->
+                    <div>
+                        <label for="fichier">Joindre un fichier :</label>
+                        <input type="file" name="fichier" id="fichier" accept=".jpg,.png,.pdf,.docx">
+                    </div>
 
-                <!-- Entrer un message avec du texte libre : -->
-                <p>
-                    <label for="message">Votre message :</label><br>
-                    <textarea name="message" id="message" required></textarea>
-                </p>
+                    <!-- Entrer un message avec du texte libre : -->
+                    <div>
+                        <label for="message">Votre message :</label><br>
+                        <textarea name="message" id="message" required></textarea>
+                    </div>
 
-                <!-- Champs masqués antispam : Pour détecter les robots spam : -->
-                <input type="text" name="antispam" style="display:none;">
+                    <!-- Champs masqués antispam : Pour détecter les robots spam : -->
+                    <input type="text" name="antispam" style="display:none;">
 
-                <!-- Politique de consentement : -->
-                <p>
-                    <label>
-                        <input type="checkbox" name="consentement" required>
-                        J'accepte que mes données soient utilisées conformément à la <a href="politique-confidentialite.html">politique de confidentialité</a>.
-                    </label>
-                </p>
+                </fieldset>
 
-                <!-- Bouton de soumission : -->
-                <p>
-                    <button type="submit">Envoyer</button>
-                </p>
+                <fieldset id="validation">
+                    <!-- Politique de consentement : -->
+                    <div>
+                        <label>
+                            <input type="checkbox" name="consentement" required>
+                            J'accepte que mes données soient utilisées conformément à la <a href="politique-confidentialite.html">politique de confidentialité</a>.
+                        </label>
+                    </div>
+
+                    <!-- Bouton de soumission : -->
+                        <button type="submit">Envoyer</button>
+                </fieldset>
             </form>
         </section>
     </main>

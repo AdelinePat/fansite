@@ -1013,4 +1013,20 @@ footer {
         }
     }
   }
+
+  footer {
+    .planSite {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: space-around;
+
+    .menuFooter {
+      padding-bottom: 24px;
+    }
+    .menuBlackpink, .menuEuroMillions, .menuScaloneta {
+      padding-bottom: 8px;
+    }
+  }
+  
+}
 }
