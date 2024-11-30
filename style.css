@@ -288,6 +288,14 @@ main {
           max-width: 100%;
           box-sizing: border-box;
 
+          a {
+            color: var(--argentina);
+
+            &:hover {
+              color: var(--blackpink);
+            }
+          }
+
           
 
           fieldset  {
