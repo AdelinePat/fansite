@@ -12,8 +12,9 @@
     --primary-color: #6CACE4;
     --secondary-color : #FFFFFF;
     --tertiary-color: #000000;
-    --quaternary-color : #FFB81C;
-    --quinary-color: #7D4016;
+    --limonade-color : #D8D8D8;
+    --blackpink : #EFA7B5;
+    --euromillions : #EEBB05;
 }
 
 @font-face {
@@ -621,14 +622,14 @@ footer {
         h2 a:hover, ul li a:hover {
             color: var(--tertiary-color);
         }
-        li.limonade a:hover {
-            color: var();
+        .limonade a:hover {
+            color: var(--limonade-color);
         }
         li.blackpink a:hover {
-            color: var();
+            color: var(--blackpink);
         }
         li.euromillions a:hover {
-            color: var(--quaternary-color);
+            color: var(--euromillions);
         }
 }
     p {
