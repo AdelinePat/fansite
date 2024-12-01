@@ -24,7 +24,7 @@
 
 /* Navbar et menu */
 .headerNavbar {
-    width: 100vw;
+    width: 100%;
     background-color: var(--primary-color);
 
     .navbar {
@@ -108,7 +108,7 @@ main {
         font-family: "argentina";
     }
     .todos {
-            width: 100vw;
+            width: 100%;
             height: 50vh;
             object-fit: cover;
             object-position: 50% 65%;
@@ -594,8 +594,8 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        align-items: flex-start;
-  }
+        align-items: flex-end;
+    }
     .titre {
         display: flex;
         flex-direction: row;
@@ -605,6 +605,15 @@ footer {
     .logo {
         width: 40px;
     }
+    .redes {
+        width: 40px;
+    }
+    .icon {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }  
+    
     .menuFooter, .menuScaloneta {
         display: flex;
         flex-direction: row;
@@ -622,6 +631,9 @@ footer {
         h2 a:hover, ul li a:hover {
             color: var(--tertiary-color);
         }
+        .icon li:hover {
+            transform: scale(1.3);
+        }
         .limonade a:hover {
             color: var(--limonade-color);
         }
@@ -631,7 +643,7 @@ footer {
         li.euromillions a:hover {
             color: var(--euromillions);
         }
-}
+    }
     p {
         font-family: "Poiret One", serif;
         font-size: 12pt;
@@ -808,6 +820,11 @@ footer {
             align-items: center;
             gap: 32px;
         }
+        .menuReseaux {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+        } 
     }
 }
 
