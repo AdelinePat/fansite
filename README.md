@@ -24,4 +24,4 @@ We decided to name our website Limonade because this word has all the letters of
 | Argentina blue| ![#6CACE4](https://via.placeholder.com/10/6CACE4?text=+) #6CACE4 |
 
 ### <u>Preview :</u>
-![Limonade screenshot](https://media.discordapp.net/attachments/1127262879092056067/1312853279184523426/image.png?ex=674e0165&is=674cafe5&hm=c6a50051f874d67e25aaa474a190c3a96d5e7ff3dbd16d05b8c3f09e16269186&=&format=webp&quality=lossless&width=424&height=702)
+![Limonade screenshot](./preview_index.jpg)
