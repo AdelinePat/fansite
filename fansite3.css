@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: "argentina";
-    src: url(./Images/AdiCupQ2022.ttf);
+    src: url(./images/AdiCupQ2022.ttf);
 }
 
 /* Navbar et menu */
@@ -441,57 +441,57 @@ main {
         .item-1 {
             z-index: 1;
             opacity: 1;
-            background: url('./Images/1.jpg');
+            background: url('./images/1.jpg');
             background-size: cover;
             background-position: 50% 55%;
         }
         .item-2 {
-            background: url('./Images/2.jpg');
+            background: url('./images/2.jpg');
             background-size: cover;
             background-position: 50% 55%;
         }
         .item-3 {
-            background: url('./Images/3.webp');
+            background: url('./images/3.webp');
             background-size: cover;
         }
         .item-4 {
-            background: url('./Images/4.jpg');
+            background: url('./images/4.jpg');
             background-size: cover;
             background-position: 50% 55%;
         }
         .item-5 {
-            background: url('./Images/5.jpeg');
+            background: url('./images/5.jpeg');
             background-size: cover;
         }
         .item-6 {
-            background: url('./Images/6.jpeg');
+            background: url('./images/6.jpeg');
             background-size: cover;
         }
         .item-7 {
-            background: url('./Images/7.jpeg');
+            background: url('./images/7.jpeg');
             background-size: cover;
             background-position: 50% 42%;
         }
         .item-8 {
-            background: url('./Images/8.webp');
+            background: url('./images/8.webp');
             background-size: cover;
         }
         .item-9 {
-            background: url('./Images/9.jpeg');
+            background: url('./images/9.jpeg');
             background-size: cover;
             background-position: 50% 5%;
         }
         .item-10 {
-            background: url('./Images/10.jpg');
+            background: url('./images/10.jpg');
             background-size: cover;
         }
         .item-11 {
-            background: url('./Images/11.jpeg');
+            background: url('./images/11.jpeg');
             background-size: cover;
             background-position: 50% 80%;
         }
         .item-12 {
-            background: url('./Images/evacuacion.jpg');
+            background: url('./images/evacuacion.jpg');
             background-size: cover;
             background-position: 50% 40%;
         }
@@ -499,59 +499,59 @@ main {
         .pic-1 {
             z-index: 1;
             opacity: 1;
-            background: url('./Images/cordoba.webp');
+            background: url('./images/cordoba.webp');
             background-size: cover;
         }
         .pic-2 {
-            background: url('./Images/rosario.jpeg');
+            background: url('./images/rosario.jpeg');
             background-size: cover;
             background-position: 50% 60%;
         }
         .pic-3 {
-            background: url('./Images/mar-del-plata.jpg');
+            background: url('./images/mar-del-plata.jpg');
             background-size: cover;
         }
         .pic-4 {
-            background: url('./Images/jujuy.jpg');
+            background: url('./images/jujuy.jpg');
             background-size: cover;
             background-position: 50% 40%;
         }
         .pic-5 {
-            background: url('./Images/bangladesh2.jpg');
+            background: url('./images/bangladesh2.jpg');
             background-size: cover;
             background-position: 50% 55%;
         }
         .pic-6 {
-            background: url('./Images/bangladesh.jpg');
+            background: url('./images/bangladesh.jpg');
             background-size: cover;
             background-position: 50% 40%;
         }
         .pic-7 {
-            background: url('./Images/naples.webp');
+            background: url('./images/naples.webp');
             background-size: cover;
             background-position: 50% 60%;
         }
         .pic-8 {
-            background: url('./Images/barcelona.jpg');
+            background: url('./images/barcelona.jpg');
             background-size: cover;
             background-position: 50% 60%;
         }
         .pic-9 {
-            background: url('./Images/madrid.webp');
+            background: url('./images/madrid.webp');
             background-size: cover;
         }
         .pic-10 {
-            background: url('./Images/sydney.webp');
+            background: url('./images/sydney.webp');
             background-size: cover;
             background-position: 50% 70%;
         }
         .pic-11 {
-            background: url('./Images/New-York.webp');
+            background: url('./images/New-York.webp');
             background-size: cover;
             background-position: 50% 60%;
         }
         .pic-12 {
-            background: url('./Images/paris.jpeg');
+            background: url('./images/paris.jpeg');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: 50% 50%;
@@ -658,17 +658,17 @@ footer {
     main {
         section.articles {
             .histoire {
-                background-image: url("./Images/background1.png");
+                background-image: url("./images/background1.png");
                 background-position: 50% 45%;
             }
            
             .worldcup {
-                background-image: url("./Images/background2.png");
+                background-image: url("./images/background2.png");
                 background-size: cover;
                 background-position: 50% 55%;
             }
             .phenomene {
-                background-image: url("./Images/background3.png");
+                background-image: url("./images/background3.png");
                 background-size: cover;
                 background-position: 50% 40%;
             }
@@ -680,7 +680,7 @@ footer {
 @media (max-width: 1140px) {
     main {
         section.articles {
-            background-image: url("./Images/ballon.png");
+            background-image: url("./images/ballon.png");
             background-repeat: no-repeat;
             background-position: 130% 30%;
 
